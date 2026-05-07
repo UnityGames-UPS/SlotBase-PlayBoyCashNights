@@ -244,7 +244,7 @@ public class BonusController : MonoBehaviour
     );
 
     maskRect.DOAnchorPos(
-        new Vector2(0f, 102.46f),
+        new Vector2(-47f, 102.46f),
         duration
     );
 
@@ -262,7 +262,7 @@ public class BonusController : MonoBehaviour
     );
 
     maskRect.DOAnchorPos(
-        new Vector2(0f, 589.7898f),
+        new Vector2(-47f, 589.7898f),
         duration
     );
 
