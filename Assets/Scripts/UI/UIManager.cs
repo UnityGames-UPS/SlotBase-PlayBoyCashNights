@@ -169,6 +169,8 @@ public class UIManager : MonoBehaviour
   private List<Sprite> WheelBorderOne;
   [SerializeField]
   private List<Sprite> WheelBorderTwo;
+  [SerializeField]
+  private Sprite WheelBorderSprite;
 
   [Header("Classes")]
   [SerializeField]
@@ -484,13 +486,14 @@ public class UIManager : MonoBehaviour
     {
       WheelBorder.textureArray.Add(source[i]);
     }
-    WheelBorder.AnimationSpeed = WheelBorder.textureArray.Count - 5;
+    WheelBorder.AnimationSpeed = WheelBorder.textureArray.Count;
     WheelBorder.StartAnimation();
   }
   internal void StopWheelborderAnim()
   {
 
     WheelBorder.StopAnimation();
+    WheelBorder.gameObject.GetComponent<Image>().sprite = WheelBorderSprite;
   }
   private void PopulateSymbolsPayout(Paylines paylines)
   {

@@ -99,6 +99,7 @@ public class BonusController : MonoBehaviour
     //   Spin_Button.gameObject.SetActive(false);
     DOVirtual.DelayedCall(7f, () =>
     {
+      uIManager.PlayWheelLoop(true);
       Spinbutton();
     });
     // }
@@ -167,6 +168,7 @@ public class BonusController : MonoBehaviour
   internal void StopWheel()
   {
     _audioManager.StopBonusAaudio();
+    uIManager.PlayWheelLoop(false);
     if (wheelRoutine != null)
     {
       wheelRoutine.Pause(); // Pause the rotation
@@ -174,14 +176,13 @@ public class BonusController : MonoBehaviour
       // Apply an elastic effect to the paused rotation
       Wheel_Transform.DORotate(Wheel_Transform.eulerAngles + Vector3.forward * Random.Range(-elasticIntensity, elasticIntensity), 1f)
           .SetEase(Ease.OutElastic);
-      uIManager.PlayWheelLoop(true);
     }
     if (Bonus_Text[stopIndex].text.Equals("NO \nBONUS"))
     {
       if (Loose_Transform) Loose_Transform.gameObject.SetActive(true);
       if (Loose_Transform) Loose_Transform.localScale = Vector3.zero;
       // if (PopupPanel) PopupPanel.SetActive(true);
-      uIManager.PlayWheelLoop(true);
+      // uIManager.PlayWheelLoop(true);
       if (Loose_Transform) Loose_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(false);
     }
@@ -191,7 +192,7 @@ public class BonusController : MonoBehaviour
       Win_Transform.GetChild(0).GetComponent<TMP_Text>().text = m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount.ToString("F3");
       if (Win_Transform) Win_Transform.localScale = Vector3.zero;
       // if (PopupPanel) PopupPanel.SetActive(true);
-      uIManager.PlayWheelLoop(true);
+
       if (Win_Transform) Win_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(true);
     }
