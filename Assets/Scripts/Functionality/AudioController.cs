@@ -18,8 +18,8 @@ public class AudioController : MonoBehaviour
     private void Start()
     {
         if (bg_adudio) bg_adudio.Play();
-        audioPlayer_button.clip = clips[clips.Length - 1];
-        audioSpin_button.clip = clips[clips.Length - 2];
+        audioPlayer_button.clip = clips[clips.Length - 2];
+        audioSpin_button.clip = clips[clips.Length - 3];
     }
 
     internal void CheckFocusFunction(bool focus, bool IsSpinning)

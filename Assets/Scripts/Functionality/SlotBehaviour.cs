@@ -571,7 +571,7 @@ public class SlotBehaviour : MonoBehaviour
 
       case 1:
         selectedSprites = symbolOne;
-        animScript.ScaleSize = 1.1f;
+        animScript.ScaleSize = 1f;
         break;
 
       case 2:
@@ -827,7 +827,7 @@ public class SlotBehaviour : MonoBehaviour
   {
     bool playJackpot = false;
     bool playScatter = false;
-    bool playBonus = false;
+    bool playBonus = SocketManager.ResultData.payload.bonusResult.isBonusTriggered;
     bool playFreespin = false;
     // if (SocketManager.ResultData.jackpot.amount > 0)
     // {
@@ -853,9 +853,10 @@ public class SlotBehaviour : MonoBehaviour
           {
             StartGameAnimation(Tempimages[j].slotImages[i].gameObject);
           }
-          if (bonus && parsedNumber == 13)
+          if (bonus && parsedNumber == 8)
           {
             StartGameAnimation(Tempimages[j].slotImages[i].gameObject);
+            audioController.PlayWLAudio("phone");
           }
           if (freeSpin && parsedNumber == 9)
           {
