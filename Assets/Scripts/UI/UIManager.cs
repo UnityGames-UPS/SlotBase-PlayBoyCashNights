@@ -427,7 +427,7 @@ public class UIManager : MonoBehaviour
     //   if (Win_Text) Win_Text.text = initAmount.ToString("F3");
     // });
 
-    ClosePopupTween = DOVirtual.DelayedCall(8f, () =>
+    ClosePopupTween = DOVirtual.DelayedCall(4f, () =>
     {
       // ClosePopup(WinPopup_Object);
       if (WinPopup_Object) WinPopup_Object.SetActive(false);
