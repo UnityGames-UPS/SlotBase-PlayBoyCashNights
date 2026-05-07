@@ -189,7 +189,7 @@ public class BonusController : MonoBehaviour
     else
     {
       if (Win_Transform) Win_Transform.gameObject.SetActive(true);
-      Win_Transform.GetChild(0).GetComponent<TMP_Text>().text = m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount.ToString("F3");
+      Win_Transform.GetChild(0).GetComponent<TMP_Text>().text += m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount.ToString("F3");
       if (Win_Transform) Win_Transform.localScale = Vector3.zero;
       // if (PopupPanel) PopupPanel.SetActive(true);
 
@@ -205,6 +205,7 @@ public class BonusController : MonoBehaviour
       Debug.Log("Swiching to Realllllllll");
       DOVirtual.DelayedCall(3f, () =>
           {
+            m_SocketManager.ResultData.payload.winAmount = m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount;
             slotManager.CheckWinPopups();
           });
     });

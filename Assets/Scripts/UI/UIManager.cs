@@ -422,6 +422,7 @@ public class UIManager : MonoBehaviour
     if (WinPopup_Object) WinPopup_Object.SetActive(true);
     SpriteNumberText Text = Win_Text.gameObject.GetComponent<SpriteNumberText>();
     Text.AnimateFromZero(amount);
+    slotManager.AnimateNormalText(amount);
     audioController.PlayWLAudio("phone");
     // // if (MainPopup_Object) MainPopup_Object.SetActive(true);
     // WinPopupTextTween = DOTween.To(() => initAmount, (val) => initAmount = val, amount, 1f).OnUpdate(() =>

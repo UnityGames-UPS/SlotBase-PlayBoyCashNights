@@ -1088,7 +1088,7 @@ public class SlotBehaviour : MonoBehaviour
 
   private Coroutine textAnimCoroutine;
 
-  public void AnimateNormalText(double targetValue)
+  internal void AnimateNormalText(double targetValue)
   {
     if (textAnimCoroutine != null)
       StopCoroutine(textAnimCoroutine);
