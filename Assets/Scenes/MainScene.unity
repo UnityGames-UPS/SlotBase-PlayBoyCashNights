@@ -1068,12 +1068,6 @@ MonoBehaviour:
   Spin_Button: {fileID: 329053993}
   Wheel_Transform: {fileID: 1344349079}
   point_colliders:
-  - {fileID: 980856938}
-  - {fileID: 2011921271}
-  - {fileID: 1519812674}
-  - {fileID: 159799788}
-  - {fileID: 150879149}
-  - {fileID: 127228099}
   - {fileID: 819749873}
   - {fileID: 2083502792}
   - {fileID: 711642838}
@@ -1090,6 +1084,12 @@ MonoBehaviour:
   - {fileID: 619590964}
   - {fileID: 1083186222}
   - {fileID: 1021980772}
+  - {fileID: 980856938}
+  - {fileID: 2011921271}
+  - {fileID: 1519812674}
+  - {fileID: 159799788}
+  - {fileID: 150879149}
+  - {fileID: 127228099}
   Bonus_Text:
   - {fileID: 819749871}
   - {fileID: 2083502790}
