@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class UIManager : MonoBehaviour
 {
-
+  [SerializeField] private JSFunctCalls jsFunctCalls;
   [Header("Menu UI")]
   [SerializeField]
   private Button Menu_Button;
@@ -193,6 +193,20 @@ public class UIManager : MonoBehaviour
   private Tween ClosePopupTween;
   internal bool isExit = false;
   internal int FreeSpins;
+
+
+  private void Awake()
+  {
+    // Make sure jsFunctCalls is assigned before using it
+    if (jsFunctCalls != null)
+    {
+      jsFunctCalls.RegisterVisibilityListener(gameObject.name);
+    }
+    else
+    {
+      Debug.LogWarning("jsFunctCalls reference is null in Awake()");
+    }
+  }
   private void Start()
   {
 
@@ -700,5 +714,17 @@ public class UIManager : MonoBehaviour
       if (audioController) audioController.ToggleMute(true, "button");
       if (audioController) audioController.ToggleMute(true, "wl");
     }
+  }
+
+  public void OnFocusChanged(string value)
+  {
+    bool focused = value == "1";
+    if (focused)
+      if (audioController) audioController.ToggleMute(false, "button");
+    if (audioController) audioController.ToggleMute(false, "wl");
+    else
+      if (audioController) audioController.ToggleMute(true, "button");
+    if (audioController) audioController.ToggleMute(true, "wl");
+    //socketManager?.HandleFusChanocge(focused);
   }
 }
