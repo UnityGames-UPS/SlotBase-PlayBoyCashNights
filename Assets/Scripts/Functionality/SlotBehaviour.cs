@@ -777,14 +777,15 @@ public class SlotBehaviour : MonoBehaviour
     else
     {
       CheckWinPopups();
-      if (SocketManager.ResultData.payload.winAmount > 0)
-      {
-        yield return new WaitForSeconds(2f);
-        SmallWinObj.SetActive(false);
-      }
+
     }
     // CheckPopups = false;
     yield return new WaitUntil(() => !CheckPopups);
+    if (SocketManager.ResultData.payload.winAmount > 0)
+    {
+      yield return new WaitForSeconds(2f);
+      SmallWinObj.SetActive(false);
+    }
     if (!IsAutoSpin && !IsFreeSpin)
     {
       ToggleButtonGrp(true);
