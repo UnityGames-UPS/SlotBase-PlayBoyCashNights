@@ -474,7 +474,7 @@ public class SlotBehaviour : MonoBehaviour
 
       case 3:
         selectedSprites = symbolThree;
-        animScript.ScaleSize = 1.4f;
+        animScript.ScaleSize = 1.6f;
         break;
 
       case 4:
