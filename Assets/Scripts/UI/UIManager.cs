@@ -335,39 +335,16 @@ public class UIManager : MonoBehaviour
     }
   }
 
-  // internal void PopulateWin(int value, double amount)
-  // {
-  //   Win_Image.textureArray.Clear();
-  //   Win_Image.textureArray.TrimExcess();
-  //   Debug.Log("win index :" + value);
-  //   switch (value)
-  //   {
-  //     case 1:
-  //       if (Win_Image) Win_Image.textureArray = BigWin_Sprite;
-  //       break;
-  //     case 2:
-  //       if (Win_Image) Win_Image.textureArray = HugeWin_Sprite;
-  //       break;
-  //     case 3:
-  //       if (Win_Image) Win_Image.textureArray = HugeWin_Sprite;
-  //       break;
-  //       // case 4:
-  //       //   if (Win_Image) Win_Image.textureArray = Jackpot_Sprite;
-  //       //   break;
-  //   }
-  //   Win_Image.StartAnimation();
-  //   LuckyGirl.StartAnimation();
-  //   StartPopupAnim(amount);
-  // }
+
   internal void PopulateWin(int value, double amount)
   {
     List<Sprite> selectedSprites = null;
 
     switch (value)
     {
-      case 1: selectedSprites = BigWin_Sprite; break;
-      case 2: selectedSprites = HugeWin_Sprite; break;
-      case 3: selectedSprites = HugeWin_Sprite; break;
+      case 1: { selectedSprites = BigWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
+      case 2: { selectedSprites = BigWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
+      case 3: { selectedSprites = HugeWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
     }
 
     // Guard: don't proceed if no valid sprites
@@ -524,32 +501,7 @@ public class UIManager : MonoBehaviour
     SymbolsText[7].text = socketManager.FeaturesData.specialWins.anyBar.pay.ToString();
     SymbolsText[8].text = (paylines.symbols[5].multiplier[1] * betPerLine).ToString();
     SymbolsText[9].text = (paylines.symbols[5].multiplier[2] * betPerLine).ToString();
-    // for (int i = 0; i < SymbolsText.Length; i++)
-    // {
-    //   string text = null;
-    //   if (paylines.symbols[i].multiplier[0] != 0)
-    //   {
-    //     // text += "5x - " + paylines.symbols[i].multiplier[0] + "x";
-    //     text += "5x - " + (paylines.symbols[i].multiplier[0] * betPerLine);
-    //   }
-    //   if (paylines.symbols[i].multiplier[1] != 0)
-    //   {
-    //     // text += "\n4x - " + paylines.symbols[i].multiplier[1] + "x";
-    //     text += "\n4x - " + (paylines.symbols[i].multiplier[1] * betPerLine);
-    //   }
-    //   if (paylines.symbols[i].multiplier[2] != 0)
-    //   {
-    //     // text += "\n3x - " + paylines.symbols[i].multiplier[2] + "x";
-    //     text += "\n3x - " + (paylines.symbols[i].multiplier[2] * betPerLine);
-    //   }
-    //   if (SymbolsText[i]) SymbolsText[i].text = text;
-    // }
 
-    // FreeSpin_Text.text = GetSymbolDescription("FreeSpin");
-    // Wild_Text.text = GetSymbolDescription("Wild");
-    // Scatter_Text.text = GetSymbolDescription("Scatter");
-    // Jackpot_Text.text = GetSymbolDescription("Jackpot");
-    // Bonus_Text.text = GetSymbolDescription("Bonus");
 
   }
   private void NextPage()
