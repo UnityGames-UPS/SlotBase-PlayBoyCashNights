@@ -821,7 +821,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 868.6
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 2340, y: 1080}
+  m_ReferenceResolution: {x: 2340, y: 1155}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.46
   m_PhysicalUnit: 3
@@ -4119,7 +4119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 536, y: -469}
+  m_AnchoredPosition: {x: 536, y: -505}
   m_SizeDelta: {x: 195.21, y: 136.98999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271841706
@@ -5692,7 +5692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.4392157}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7153,7 +7153,7 @@ MonoBehaviour:
   slotManager: {fileID: 2046803210}
   uiManager: {fileID: 377874625}
   JSManager: {fileID: 1029290966}
-  testToken: b06a6689c8764cd49928eec49fd8e901
+  testToken: 1268f15a648f4e02aac44a3cbc7233fb
   RaycastBlocker: {fileID: 2036107390}
 --- !u!1 &502968745
 GameObject:
@@ -8303,7 +8303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785, y: -423}
+  m_AnchoredPosition: {x: 785, y: -459}
   m_SizeDelta: {x: 246.66, y: 229.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567733206
@@ -8698,8 +8698,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.4
-  m_fontSizeBase: 61.4
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8787,7 +8787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 784, y: -425}
+  m_AnchoredPosition: {x: 784, y: -461}
   m_SizeDelta: {x: 211.3, y: 214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582723888
@@ -10949,7 +10949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -514.28, y: -476}
+  m_AnchoredPosition: {x: -514.28, y: -512}
   m_SizeDelta: {x: 565.65, y: 132.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704304272
@@ -12997,7 +12997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -857, y: -472}
+  m_AnchoredPosition: {x: -857, y: -509}
   m_SizeDelta: {x: 120, y: 105.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796307138
@@ -13847,7 +13847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.17, y: -364}
+  m_AnchoredPosition: {x: 38.17, y: -400}
   m_SizeDelta: {x: 628.69, y: 145.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843893395
@@ -16175,7 +16175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 536, y: -469.00006}
+  m_AnchoredPosition: {x: 536, y: -505.00006}
   m_SizeDelta: {x: 195.21, y: 136.98999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002109378
@@ -21003,7 +21003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108.82, y: -476}
+  m_AnchoredPosition: {x: 108.82, y: -512}
   m_SizeDelta: {x: 341.64, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273666559
@@ -28263,8 +28263,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.4
-  m_fontSizeBase: 61.4
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -35720,7 +35720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIWrapper: {fileID: 1485219722}
   CanvasScaler: {fileID: 51930702}
-  MatchWidth: 0
+  MatchWidth: 0.1
   MatchHeight: 1
   PortraitMatchWandH: 0.44
   transitionDuration: 0.2
