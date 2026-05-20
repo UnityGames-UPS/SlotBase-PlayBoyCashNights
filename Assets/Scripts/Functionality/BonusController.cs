@@ -61,6 +61,7 @@ public class BonusController : MonoBehaviour
 
 
 
+
   private void Start()
   {
     if (Spin_Button) Spin_Button.onClick.RemoveAllListeners();
@@ -72,14 +73,13 @@ public class BonusController : MonoBehaviour
     SetToStartState();
     StartIdleWheelSpin();
   }
+
   private void SetToStartState()
   {
-    // Move Slot Reel
     slotRect.position = startpos.position;
-
-    // Apply Bonus Mask size from screenshot start values
     maskRect.sizeDelta = new Vector2(2340f, 428.44f);
   }
+
   internal void StartBonus(int stop)
   {
     AnimateToEnd();
@@ -94,33 +94,24 @@ public class BonusController : MonoBehaviour
     if (Spin_Button) Spin_Button.interactable = true;
 
     StartCoroutine(doCharecterAnim());
-    // if (slotManager.IsAutoSpin || slotManager.IsFreeSpin)
-    // {
-    //   Spin_Button.gameObject.SetActive(false);
     DOVirtual.DelayedCall(7f, () =>
     {
       uIManager.PlayWheelLoop(true);
       Spinbutton();
     });
-    // }
-    // else
-    // {
-    //   Spin_Button.gameObject.SetActive(true);
-    // }
   }
+
   IEnumerator doCharecterAnim()
   {
     MoveBlueLadyIn();
     yield return new WaitForSeconds(1f);
     YellowLady.StopAnimation();
     YellowLady.StartAnimation();
-
   }
 
   private void Spinbutton()
   {
     StopIdleWheelSpin();
-
     isCollision = false;
     if (Spin_Button) Spin_Button.interactable = false;
     RotateWheel();
@@ -134,21 +125,23 @@ public class BonusController : MonoBehaviour
   {
     for (int i = 0; i < bonusdata.multipliers.Count; i++)
     {
-
       if (Bonus_Text[i]) Bonus_Text[i].text = (bonusdata.multipliers[i]).ToString();
-      // if (Bonus_Text[i]) Bonus_Text[i].text = (bonusdata.multipliers[i] * m_SocketManager.InitialData.bets[slotManager.BetCounter]).ToString();
-      // Debug.Log("Bonus Data: " + bonusdata[i]);
-      // Debug.Log("Bet Data: " + m_SocketManager.InitialData.bets[slotManager.BetCounter]);
-      // Debug.Log("Multiplied Form: " + (double.Parse(bonusdata[i]) * m_SocketManager.InitialData.bets[slotManager.BetCounter]).ToString());
       Bonus_Text[i].color = (i % 2 != 0) ? Color.black : Color.white;
-
     }
   }
 
   private void RotateWheel()
   {
-    if (Wheel_Transform) Wheel_Transform.localEulerAngles = new Vector3(0, 0, 359);
-    if (Wheel_Transform) wheelRoutine = Wheel_Transform.DORotate(new Vector3(0, 0, 0), 1, RotateMode.FastBeyond360).SetEase(Ease.Linear).SetLoops(-1);
+    // FIX 1: Removed hard reset to 359 (was causing jerk)
+    // FIX 2: LocalAxisAdd instead of FastBeyond360
+    // FIX 3: LoopType.Incremental instead of default Restart
+    if (Wheel_Transform)
+    {
+      wheelRoutine = Wheel_Transform
+        .DORotate(new Vector3(0, 0, -360f), 1f, RotateMode.LocalAxisAdd)
+        .SetEase(Ease.Linear)
+        .SetLoops(-1, LoopType.Incremental);
+    }
     _audioManager.PlayBonusAudio("cycleSpin");
   }
 
@@ -169,20 +162,28 @@ public class BonusController : MonoBehaviour
   {
     _audioManager.StopBonusAaudio();
     uIManager.PlayWheelLoop(false);
+
     if (wheelRoutine != null)
     {
-      wheelRoutine.Pause(); // Pause the rotation
+      // FIX 4: Kill instead of Pause
+      wheelRoutine.Kill();
+      wheelRoutine = null;
 
-      // Apply an elastic effect to the paused rotation
-      Wheel_Transform.DORotate(Wheel_Transform.eulerAngles + Vector3.forward * Random.Range(-elasticIntensity, elasticIntensity), 1f)
-          .SetEase(Ease.OutElastic);
+      Wheel_Transform.DORotate(
+        Wheel_Transform.eulerAngles + Vector3.forward * Random.Range(-elasticIntensity, elasticIntensity),
+        1f
+      ).SetEase(Ease.OutElastic)
+      .OnComplete(() =>
+      {
+        // FIX 5: Reset angle after elastic settles — invisible to user, prevents float accumulation
+        // Wheel_Transform.localEulerAngles = Vector3.zero;
+      });
     }
+
     if (Bonus_Text[stopIndex].text.Equals("NO \nBONUS"))
     {
       if (Loose_Transform) Loose_Transform.gameObject.SetActive(true);
       if (Loose_Transform) Loose_Transform.localScale = Vector3.zero;
-      // if (PopupPanel) PopupPanel.SetActive(true);
-      // uIManager.PlayWheelLoop(true);
       if (Loose_Transform) Loose_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(false);
     }
@@ -191,37 +192,33 @@ public class BonusController : MonoBehaviour
       if (Win_Transform) Win_Transform.gameObject.SetActive(true);
       Win_Transform.GetChild(0).GetComponent<TMP_Text>().text += m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount.ToString("F3");
       if (Win_Transform) Win_Transform.localScale = Vector3.zero;
-      // if (PopupPanel) PopupPanel.SetActive(true);
-
       if (Win_Transform) Win_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(true);
     }
+
     DOVirtual.DelayedCall(1.5f, () =>
     {
-      ResetColliders();
       MoveBlueLadyOut();
       if (_audioManager) _audioManager.SwitchBGSound(false);
-      // if (Bonus_Object) Bonus_Object.SetActive(false);
       Debug.Log("Swiching to Realllllllll");
       DOVirtual.DelayedCall(3f, () =>
-          {
-            m_SocketManager.ResultData.payload.winAmount = m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount;
-            slotManager.CheckWinPopups();
-          });
+      {
+        ResetColliders();
+        m_SocketManager.ResultData.payload.winAmount = m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount;
+        slotManager.CheckWinPopups();
+      });
     });
+
     DOVirtual.DelayedCall(3f, () =>
-             {
-               uIManager.StopWheelborderAnim();
-               if (PopupPanel) PopupPanel.SetActive(false);
-               AnimateToStart();
-
-               DOVirtual.DelayedCall(1f, () =>
-   {
-
-     StartIdleWheelSpin();
-   });
-             });
-
+    {
+      uIManager.StopWheelborderAnim();
+      if (PopupPanel) PopupPanel.SetActive(false);
+      AnimateToStart();
+      DOVirtual.DelayedCall(1f, () =>
+      {
+        StartIdleWheelSpin();
+      });
+    });
   }
 
   internal void PlayWinLooseSound(bool isWin)
@@ -239,49 +236,49 @@ public class BonusController : MonoBehaviour
   public void AnimateToEnd(float duration = 0.5f)
   {
     slotRect.DOAnchorPos(
-        ((RectTransform)endpos).anchoredPosition,
-        duration
+      ((RectTransform)endpos).anchoredPosition,
+      duration
     );
-
     maskRect.DOAnchorPos(
-        new Vector2(-47f, 102.46f),
-        duration
+      new Vector2(-47f, 102.46f),
+      duration
     );
-
     maskRect.DOSizeDelta(
-        new Vector2(2340f, 1403.09f),
-        duration
+      new Vector2(2340f, 1403.09f),
+      duration
     );
   }
 
   public void AnimateToStart(float duration = 0.5f)
   {
     slotRect.DOAnchorPos(
-        ((RectTransform)startpos).anchoredPosition,
-        duration
+      ((RectTransform)startpos).anchoredPosition,
+      duration
     );
-
     maskRect.DOAnchorPos(
-        new Vector2(-47f, 589.7898f),
-        duration
+      new Vector2(-47f, 589.7898f),
+      duration
     );
-
     maskRect.DOSizeDelta(
-        new Vector2(2340f, 428.44f),
-        duration
+      new Vector2(2340f, 428.44f),
+      duration
     );
   }
 
   private void StartIdleWheelSpin()
   {
     idleWheelTween?.Kill();
+    idleWheelTween = null;
 
     if (Wheel_Transform)
     {
+      // FIX 5: Reset angle cleanly before idle starts
+      Wheel_Transform.localEulerAngles = Vector3.zero;
+
       idleWheelTween = Wheel_Transform
-          .DORotate(new Vector3(0, 0, -360f), 8f, RotateMode.LocalAxisAdd)
-          .SetEase(Ease.Linear)
-          .SetLoops(-1, LoopType.Restart);
+        .DORotate(new Vector3(0, 0, -360f), 8f, RotateMode.LocalAxisAdd)
+        .SetEase(Ease.Linear)
+        .SetLoops(-1, LoopType.Incremental);
     }
   }
 
@@ -290,10 +287,6 @@ public class BonusController : MonoBehaviour
     idleWheelTween?.Kill();
     idleWheelTween = null;
   }
-
-
-
-
 
   private IEnumerator MoveCharacter(GameObject character, Transform start, Transform end, float duration)
   {
@@ -306,7 +299,6 @@ public class BonusController : MonoBehaviour
     {
       time += Time.deltaTime;
       float t = time / duration;
-
       character.transform.position = Vector3.Lerp(start.position, end.position, t);
       yield return null;
     }
@@ -323,14 +315,4 @@ public class BonusController : MonoBehaviour
   {
     StartCoroutine(MoveCharacter(BlueLady, BlueLadyEndPos, BlueLadyStartPos, duration));
   }
-
-  // public void MoveYellowLadyIn(float duration = 0.5f)
-  // {
-  //   StartCoroutine(MoveCharacter(YellowLady, YellowLadyStartPos, YellowLadyEndPos, duration));
-  // }
-
-  // public void MoveYellowLadyOut(float duration = 0.5f)
-  // {
-  //   StartCoroutine(MoveCharacter(YellowLady, YellowLadyEndPos, YellowLadyStartPos, duration));
-  // }
 }

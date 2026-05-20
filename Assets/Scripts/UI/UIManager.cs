@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class UIManager : MonoBehaviour
 {
@@ -670,13 +671,27 @@ public class UIManager : MonoBehaviour
 
   public void OnFocusChanged(string value)
   {
+
     bool focused = value == "1";
+    Debug.Log("Focus Changed and audio called" + focused);
     if (focused)
-      if (audioController) audioController.ToggleMute(false, "button");
-    if (audioController) audioController.ToggleMute(false, "wl");
+    {
+      if (!audioController.audioPlayer_button.mute)
+      {
+        if (audioController) audioController.ToggleMute(false, "button");
+        if (audioController) audioController.ToggleMute(false, "wl");
+      }
+      if (!audioController.bg_adudio.mute)
+      {
+        if (audioController) audioController.ToggleMute(false, "bg");
+      }
+
+    }
     else
-      if (audioController) audioController.ToggleMute(true, "button");
-    if (audioController) audioController.ToggleMute(true, "wl");
+    {
+      if (audioController) audioController.ToggleMute(true);
+      // if (audioController) audioController.ToggleMute(true, "wl");
+    }
     //socketManager?.HandleFusChanocge(focused);
   }
 }

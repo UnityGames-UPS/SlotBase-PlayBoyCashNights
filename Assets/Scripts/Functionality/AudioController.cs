@@ -7,7 +7,7 @@ using Best.SocketIO;
 
 public class AudioController : MonoBehaviour
 {
-    [SerializeField] private AudioSource bg_adudio;
+    [SerializeField] internal AudioSource bg_adudio;
     [SerializeField] internal AudioSource audioPlayer_wl;
     [SerializeField] internal AudioSource audioPlayer_button;
     [SerializeField] internal AudioSource audioSpin_button;
