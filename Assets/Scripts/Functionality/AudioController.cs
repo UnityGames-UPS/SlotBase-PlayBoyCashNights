@@ -145,6 +145,7 @@ public class AudioController : MonoBehaviour
 
     internal void ToggleMute(bool toggle, string type = "all")
     {
+
         switch (type)
         {
             case "bg":

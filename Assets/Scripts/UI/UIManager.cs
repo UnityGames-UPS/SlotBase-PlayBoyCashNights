@@ -507,6 +507,7 @@ public class UIManager : MonoBehaviour
   }
   private void NextPage()
   {
+    audioController.PlayButtonAudio();
     currentPageIndex++;
 
     // Loop to first page
@@ -518,6 +519,7 @@ public class UIManager : MonoBehaviour
 
   private void PreviousPage()
   {
+    audioController.PlayButtonAudio();
     currentPageIndex--;
 
     // Loop to last page
@@ -669,29 +671,26 @@ public class UIManager : MonoBehaviour
     }
   }
 
+
+
+
+
   public void OnFocusChanged(string value)
   {
-
     bool focused = value == "1";
     Debug.Log("Focus Changed and audio called" + focused);
+
     if (focused)
     {
-      if (!audioController.audioPlayer_button.mute)
-      {
-        if (audioController) audioController.ToggleMute(false, "button");
-        if (audioController) audioController.ToggleMute(false, "wl");
-      }
-      if (!audioController.bg_adudio.mute)
-      {
-        if (audioController) audioController.ToggleMute(false, "bg");
-      }
-
+      // Respect user's own mute settings via isMusic/isSound
+      audioController.ToggleMute(!isMusic, "bg");
+      audioController.ToggleMute(!isSound, "button");
+      audioController.ToggleMute(!isSound, "wl");
     }
     else
     {
-      if (audioController) audioController.ToggleMute(true);
-      // if (audioController) audioController.ToggleMute(true, "wl");
+      audioController.ToggleMute(true, "all");
     }
-    //socketManager?.HandleFusChanocge(focused);
   }
+
 }
