@@ -650,10 +650,7 @@ public class SlotBehaviour : MonoBehaviour
     CheckPopups = true;
 
     //if (TotalWin_text) TotalWin_text.text = SocketManager.ResultData.payload.winAmount.ToString("F3");
-    BalanceTween?.Kill();
-    if (Balance_text) Balance_text.text = SocketManager.ResultData.player.balance.ToString("F3");
 
-    currentBalance = SocketManager.PlayerData.balance;
 
     // if (SocketManager.ResultData.jackpot.isTriggered)
     // {
@@ -679,6 +676,10 @@ public class SlotBehaviour : MonoBehaviour
       yield return new WaitForSeconds(2f);
       SmallWinObj.SetActive(false);
     }
+    BalanceTween?.Kill();
+    if (Balance_text) Balance_text.text = SocketManager.ResultData.player.balance.ToString("F3");
+
+    currentBalance = SocketManager.PlayerData.balance;
     if (!IsAutoSpin && !IsFreeSpin)
     {
       ToggleButtonGrp(true);
