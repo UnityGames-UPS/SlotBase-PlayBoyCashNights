@@ -22,30 +22,6 @@ public class AudioController : MonoBehaviour
         audioSpin_button.clip = clips[clips.Length - 3];
     }
 
-    internal void CheckFocusFunction(bool focus, bool IsSpinning)
-    {
-        if (!focus)
-        {
-            bg_adudio.Pause();
-            audioPlayer_wl.Pause();
-            audioPlayer_button.Pause();
-        }
-        else
-        {
-            if (!bg_adudio.mute) bg_adudio.UnPause();
-            if (IsSpinning)
-            {
-                if (!audioPlayer_wl.mute) audioPlayer_wl.UnPause();
-            }
-            else
-            {
-                StopWLAaudio();
-            }
-            if (!audioPlayer_button.mute) audioPlayer_button.UnPause();
-
-        }
-    }
-
     internal void SwitchBGSound(bool isbonus)
     {
         if (isbonus)
