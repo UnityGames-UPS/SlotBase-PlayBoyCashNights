@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: e2d54bbf4c5a347c2b811aaee5c43132
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8957414832816240219
+    second: bunny yellow girl_0
+  - first:
+      213: 5272183246689250698
+    second: bunny yellow girl_1
+  - first:
+      213: -7923627427178721952
+    second: bunny yellow girl_2
+  - first:
+      213: 5670051590711723895
+    second: bunny yellow girl_3
+  - first:
+      213: -350791900867391947
+    second: bunny yellow girl_4
+  - first:
+      213: 4838580417102348855
+    second: bunny yellow girl_5
+  - first:
+      213: 8777102920481014447
+    second: bunny yellow girl_6
+  - first:
+      213: -5812353117608920301
+    second: bunny yellow girl_7
+  - first:
+      213: 2408882819638252718
+    second: bunny yellow girl_8
+  - first:
+      213: -8850711388266608863
+    second: bunny yellow girl_9
+  - first:
+      213: -8319696036539385039
+    second: bunny yellow girl_10
+  - first:
+      213: -3768320976344480201
+    second: bunny yellow girl_11
+  - first:
+      213: 29648499755231673
+    second: bunny yellow girl_12
+  - first:
+      213: -1634035717371159772
+    second: bunny yellow girl_13
+  - first:
+      213: -3114597888198557423
+    second: bunny yellow girl_14
+  - first:
+      213: 6330153031756022707
+    second: bunny yellow girl_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny yellow girl_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 497
+        width: 155
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a94c200baed0b380800000000000000
+      internalID: -8957414832816240219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_1
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 364
+        width: 161
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8dada9cabe8a2940800000000000000
+      internalID: 5272183246689250698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_2
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 367
+        width: 131
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d487e06de990290800000000000000
+      internalID: -7923627427178721952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_3
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 501
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 777c28a61e110be40800000000000000
+      internalID: 5670051590711723895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_4
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 496
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e07beef9cb12bf0800000000000000
+      internalID: -350791900867391947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_5
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 496
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7320c82e047162340800000000000000
+      internalID: 4838580417102348855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 138
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa280546a988ec970800000000000000
+      internalID: 8777102920481014447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1
+        width: 127
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b39cb72af565fa0800000000000000
+      internalID: -5812353117608920301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_8
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 367
+        width: 100
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4541269221e6120800000000000000
+      internalID: 2408882819638252718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2
+        width: 189
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1274ddca2e4fb2580800000000000000
+      internalID: -8850711388266608863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_10
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 210
+        width: 175
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b38dec8808a8c80800000000000000
+      internalID: -8319696036539385039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_11
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 149
+        width: 47
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7368555990c34bbc0800000000000000
+      internalID: -3768320976344480201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_12
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 2
+        width: 164
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9a8084725596000800000000000000
+      internalID: 29648499755231673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_13
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 149
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b9acb2c2db259e0800000000000000
+      internalID: -1634035717371159772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_14
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 64
+        width: 48
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1114eb7f8b9b6c4d0800000000000000
+      internalID: -3114597888198557423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny yellow girl_15
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 2
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b30eafc4a839d750800000000000000
+      internalID: 6330153031756022707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bunny yellow girl_0: -8957414832816240219
+      bunny yellow girl_1: 5272183246689250698
+      bunny yellow girl_10: -8319696036539385039
+      bunny yellow girl_11: -3768320976344480201
+      bunny yellow girl_12: 29648499755231673
+      bunny yellow girl_13: -1634035717371159772
+      bunny yellow girl_14: -3114597888198557423
+      bunny yellow girl_15: 6330153031756022707
+      bunny yellow girl_2: -7923627427178721952
+      bunny yellow girl_3: 5670051590711723895
+      bunny yellow girl_4: -350791900867391947
+      bunny yellow girl_5: 4838580417102348855
+      bunny yellow girl_6: 8777102920481014447
+      bunny yellow girl_7: -5812353117608920301
+      bunny yellow girl_8: 2408882819638252718
+      bunny yellow girl_9: -8850711388266608863
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

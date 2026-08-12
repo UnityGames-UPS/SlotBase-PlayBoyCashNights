@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using Spine.Unity;
 
 public class BonusController : MonoBehaviour
 {
@@ -39,14 +40,22 @@ public class BonusController : MonoBehaviour
   private Transform startpos;
   [SerializeField]
   private Transform endpos;
+  [SerializeField]
+  private Vector2 MaskExpandedSize = new Vector2(2340f, 1403.09f);
+  private Vector2 maskDefaultSize;
+  private Vector2 maskDefaultPos;
 
   [Header("Charecter")]
-  [SerializeField] private GameObject BlueLady;
-  [SerializeField] private ImageAnimation YellowLady;
+  [SerializeField] private SkeletonGraphic BlueLadyAnim;
+  [SerializeField] private SkeletonGraphic YellowLadyAnim;
   [SerializeField] private Transform YellowLadyStartPos;
   [SerializeField] private Transform YellowLadyEndPos;
   [SerializeField] private Transform BlueLadyStartPos;
   [SerializeField] private Transform BlueLadyEndPos;
+  [SerializeField] private float CharacterMoveDuration = 2f;
+  [SerializeField] private Ease CharacterMoveEaseIn = Ease.OutQuad;
+  [SerializeField] private Ease CharacterMoveEaseOut = Ease.InQuad;
+  [SerializeField] private float YellowLadyHoldDuration = 3f;
   internal bool isCollision = false;
 
   private Tween idleWheelTween;
@@ -69,6 +78,8 @@ public class BonusController : MonoBehaviour
 
     slotRect = SlotReel.GetComponent<RectTransform>();
     maskRect = BonusObjectMask.GetComponent<RectTransform>();
+    maskDefaultSize = maskRect.sizeDelta;
+    maskDefaultPos = maskRect.anchoredPosition;
 
     SetToStartState();
     StartIdleWheelSpin();
@@ -77,7 +88,8 @@ public class BonusController : MonoBehaviour
   private void SetToStartState()
   {
     slotRect.position = startpos.position;
-    maskRect.sizeDelta = new Vector2(2340f, 428.44f);
+    maskRect.anchoredPosition = maskDefaultPos;
+    maskRect.sizeDelta = maskDefaultSize;
   }
 
   internal void StartBonus(int stop)
@@ -104,9 +116,10 @@ public class BonusController : MonoBehaviour
   IEnumerator doCharecterAnim()
   {
     MoveBlueLadyIn();
+    BlueLadyAnim.AnimationState.SetAnimation(0, "animation", true);
     yield return new WaitForSeconds(1f);
-    YellowLady.StopAnimation();
-    YellowLady.StartAnimation();
+    YellowLadyAnim.AnimationState.SetAnimation(0, "animation", true);
+    MoveYellowLadyCycle();
   }
 
   private void Spinbutton()
@@ -239,12 +252,8 @@ public class BonusController : MonoBehaviour
       ((RectTransform)endpos).anchoredPosition,
       duration
     );
-    maskRect.DOAnchorPos(
-      new Vector2(-47f, 102.46f),
-      duration
-    );
     maskRect.DOSizeDelta(
-      new Vector2(2340f, 1403.09f),
+      MaskExpandedSize,
       duration
     );
   }
@@ -255,12 +264,8 @@ public class BonusController : MonoBehaviour
       ((RectTransform)startpos).anchoredPosition,
       duration
     );
-    maskRect.DOAnchorPos(
-      new Vector2(-47f, 589.7898f),
-      duration
-    );
     maskRect.DOSizeDelta(
-      new Vector2(2340f, 428.44f),
+      maskDefaultSize,
       duration
     );
   }
@@ -288,31 +293,31 @@ public class BonusController : MonoBehaviour
     idleWheelTween = null;
   }
 
-  private IEnumerator MoveCharacter(GameObject character, Transform start, Transform end, float duration)
+  private void MoveCharacter(GameObject character, Transform start, Transform end, bool snapToStart, Ease ease)
   {
     character.SetActive(true);
-    character.transform.position = start.position;
-
-    float time = 0f;
-
-    while (time < duration)
-    {
-      time += Time.deltaTime;
-      float t = time / duration;
-      character.transform.position = Vector3.Lerp(start.position, end.position, t);
-      yield return null;
-    }
-
-    character.transform.position = end.position;
+    if (snapToStart) character.transform.localPosition = start.localPosition;
+    character.transform.DOLocalMove(end.localPosition, CharacterMoveDuration).SetEase(ease);
   }
 
-  public void MoveBlueLadyIn(float duration = 0.5f)
+  public void MoveBlueLadyIn()
   {
-    StartCoroutine(MoveCharacter(BlueLady, BlueLadyStartPos, BlueLadyEndPos, duration));
+    MoveCharacter(BlueLadyAnim.gameObject, BlueLadyStartPos, BlueLadyEndPos, snapToStart: true, ease: CharacterMoveEaseIn);
   }
 
-  public void MoveBlueLadyOut(float duration = 0.5f)
+  public void MoveBlueLadyOut()
   {
-    StartCoroutine(MoveCharacter(BlueLady, BlueLadyEndPos, BlueLadyStartPos, duration));
+    MoveCharacter(BlueLadyAnim.gameObject, BlueLadyEndPos, BlueLadyStartPos, snapToStart: false, ease: CharacterMoveEaseOut);
+  }
+
+  public void MoveYellowLadyCycle()
+  {
+    YellowLadyAnim.gameObject.SetActive(true);
+    YellowLadyAnim.transform.localPosition = YellowLadyStartPos.localPosition;
+
+    DOTween.Sequence()
+      .Append(YellowLadyAnim.transform.DOLocalMove(YellowLadyEndPos.localPosition, CharacterMoveDuration).SetEase(CharacterMoveEaseIn))
+      .AppendInterval(YellowLadyHoldDuration)
+      .Append(YellowLadyAnim.transform.DOLocalMove(YellowLadyStartPos.localPosition, CharacterMoveDuration).SetEase(CharacterMoveEaseOut));
   }
 }

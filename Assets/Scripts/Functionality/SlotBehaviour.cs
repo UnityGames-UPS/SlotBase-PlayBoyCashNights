@@ -145,7 +145,7 @@ public class SlotBehaviour : MonoBehaviour
   protected int Lines = 5;
   [SerializeField]
   private int IconSizeFactor = 100;       //set this parameter according to the size of the icon and spacing
-  private int numberOfSlots = 5;          //number of columns
+  private int numberOfSlots = 3;          //number of columns
   private bool StopSpinToggle;
   private float SpinDelay = 0.2f;
   private bool IsTurboOn;
