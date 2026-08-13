@@ -28,6 +28,7 @@ public class ButtonHoverScaler : MonoBehaviour
         var entryEnter = new EventTrigger.Entry { eventID = EventTriggerType.PointerEnter };
         entryEnter.callback.AddListener((data) =>
         {
+            if (!button.interactable) return;
             button.transform.DOScale(originalScale * scaleFactor, duration).SetEase(Ease.OutBack);
         });
         trigger.triggers.Add(entryEnter);
@@ -35,6 +36,7 @@ public class ButtonHoverScaler : MonoBehaviour
         var entryExit = new EventTrigger.Entry { eventID = EventTriggerType.PointerExit };
         entryExit.callback.AddListener((data) =>
         {
+            if (!button.interactable) return;
             button.transform.DOScale(originalScale, duration).SetEase(Ease.OutBack);
         });
         trigger.triggers.Add(entryExit);

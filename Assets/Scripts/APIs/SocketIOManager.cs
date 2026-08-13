@@ -471,11 +471,6 @@ public class SocketIOManager : MonoBehaviour
   private void PopulateSlotSocket(List<string> LineIds)
   {
 
-    // slotManager.InitializeMatrix();
-    for (int i = 0; i < LineIds.Count; i++)
-    {
-      slotManager.FetchLines(LineIds[i], i);
-    }
     slotManager.SetInitialUI();
 #if UNITY_WEBGL && !UNITY_EDITOR
     JSManager.SendCustomMessage("OnEnter");

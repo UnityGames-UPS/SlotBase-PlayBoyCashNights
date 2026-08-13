@@ -29,12 +29,6 @@ public class SlotBehaviour : MonoBehaviour
   private Transform[] Slot_Transform;
 
   [Header("Line Button Objects")]
-  [SerializeField]
-  private List<GameObject> StaticLine_Objects;
-
-  [Header("Line Button Texts")]
-  [SerializeField]
-  private List<TMP_Text> StaticLine_Texts;
 
   private Dictionary<int, string> y_string = new Dictionary<int, string>();
 
@@ -327,15 +321,6 @@ public class SlotBehaviour : MonoBehaviour
     CompareBalance();
   }
 
-  #region LinesCalculation
-  //Fetch Lines from backend
-  internal void FetchLines(string LineVal, int count)
-  {
-    y_string.Add(count + 1, LineVal);
-    StaticLine_Texts[count].text = (count + 1).ToString();
-    StaticLine_Objects[count].SetActive(true);
-  }
-
   //Generate Static Lines from button hovers
   internal void GenerateStaticLine(TMP_Text LineID_Text)
   {
@@ -349,8 +334,6 @@ public class SlotBehaviour : MonoBehaviour
     {
       Debug.Log("Exception while parsing " + e.Message);
     }
-    List<int> y_points = null;
-    y_points = y_string[LineID]?.Split(',')?.Select(Int32.Parse)?.ToList();
     PayCalculator.GeneratePayoutLinesBackend(LineID, true);
   }
 
@@ -359,7 +342,6 @@ public class SlotBehaviour : MonoBehaviour
   {
     PayCalculator.ResetStaticLine();
   }
-  #endregion
 
   private void MaxBet()
   {
@@ -831,7 +813,6 @@ public class SlotBehaviour : MonoBehaviour
   //generate the payout lines generated 
   private void CheckPayoutLineBackend(List<int> LineId, double jackpot = 0)
   {
-    List<int> y_points = null;
     if (LineId.Count > 0)
     {
       if (jackpot <= 0)
@@ -841,7 +822,6 @@ public class SlotBehaviour : MonoBehaviour
 
       for (int i = 0; i < LineId.Count; i++)
       {
-        y_points = y_string[LineId[i] + 1]?.Split(',')?.Select(Int32.Parse)?.ToList();
         PayCalculator.GeneratePayoutLinesBackend(LineId[i]);
       }
 
