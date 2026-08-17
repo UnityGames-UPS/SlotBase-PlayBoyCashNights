@@ -460,6 +460,7 @@ public class UIManager : MonoBehaviour
     }
 
     SlotBorder.AnimationSpeed = loopanim ? 30 : 20;
+    SlotBorder.doLoopAnimation = loopanim;
     SlotBorder.StartAnimation();
   }
   internal void PlayWheelLoop(bool loopanim = false)
@@ -480,6 +481,7 @@ public class UIManager : MonoBehaviour
       WheelBorder.textureArray.Add(source[i]);
     }
     WheelBorder.AnimationSpeed = WheelBorder.textureArray.Count - 13;
+    WheelBorder.doLoopAnimation = !loopanim;
     WheelBorder.StartAnimation();
   }
   internal void StopWheelborderAnim()

@@ -112,7 +112,7 @@ public class BonusController : MonoBehaviour
     StopIdleWheelSpin();
     isCollision = false;
     RotateWheel();
-    DOVirtual.DelayedCall(1.5f, () =>
+    DOVirtual.DelayedCall(2f, () =>
     {
       TurnCollider(stopIndex);
     });
