@@ -411,7 +411,6 @@ public class UIManager : MonoBehaviour
 
   private void StartPopupAnim(double amount)
   {
-    double initAmount = 0;
     if (WinPopup_Object) WinPopup_Object.SetActive(true);
     SpriteNumberText Text = Win_Text.gameObject.GetComponent<SpriteNumberText>();
     Text.AnimateFromZero(amount);
@@ -460,7 +459,7 @@ public class UIManager : MonoBehaviour
       SlotBorder.textureArray.Add(source[i]);
     }
 
-    SlotBorder.AnimationSpeed = SlotBorder.textureArray.Count - 5;
+    SlotBorder.AnimationSpeed = loopanim ? 30 : 20;
     SlotBorder.StartAnimation();
   }
   internal void PlayWheelLoop(bool loopanim = false)
@@ -480,7 +479,7 @@ public class UIManager : MonoBehaviour
     {
       WheelBorder.textureArray.Add(source[i]);
     }
-    WheelBorder.AnimationSpeed = WheelBorder.textureArray.Count;
+    WheelBorder.AnimationSpeed = WheelBorder.textureArray.Count - 13;
     WheelBorder.StartAnimation();
   }
   internal void StopWheelborderAnim()

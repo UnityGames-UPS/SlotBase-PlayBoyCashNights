@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: f04f15239b30247f281cf0267643ff94
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 785156649400612153
+    second: Unable to connect to the server__0
+  - first:
+      213: 6731040360942856335
+    second: Unable to connect to the server__1
+  - first:
+      213: 3223067231416827783
+    second: Unable to connect to the server__2
+  - first:
+      213: -3966609173276094599
+    second: Unable to connect to the server__3
+  - first:
+      213: 706678477509039730
+    second: Unable to connect to the server__4
+  - first:
+      213: 5411434164225182703
+    second: Unable to connect to the server__5
+  - first:
+      213: -5827018460970703710
+    second: Unable to connect to the server__6
+  - first:
+      213: -3661218465063998423
+    second: Unable to connect to the server__7
+  - first:
+      213: 4449935233508917473
+    second: Unable to connect to the server__8
+  - first:
+      213: 1784626255498038198
+    second: Unable to connect to the server__9
+  - first:
+      213: 4947053241187413288
+    second: Unable to connect to the server__10
+  - first:
+      213: 6284284358372563192
+    second: Unable to connect to the server__11
+  - first:
+      213: -2237859091623741158
+    second: Unable to connect to the server__12
+  - first:
+      213: -6781390055707324237
+    second: Unable to connect to the server__13
+  - first:
+      213: -587101002818621195
+    second: Unable to connect to the server__14
+  - first:
+      213: -5784567247830321669
+    second: Unable to connect to the server__15
+  - first:
+      213: 3589849865663904332
+    second: Unable to connect to the server__16
+  - first:
+      213: -7368535883406960376
+    second: Unable to connect to the server__17
+  - first:
+      213: 8901224372395487351
+    second: Unable to connect to the server__18
+  - first:
+      213: -60335556089601907
+    second: Unable to connect to the server__19
+  - first:
+      213: 2201974039921566852
+    second: Unable to connect to the server__20
+  - first:
+      213: -7464113754895971233
+    second: Unable to connect to the server__21
+  - first:
+      213: 1506756000668222931
+    second: Unable to connect to the server__22
+  - first:
+      213: 7567507771831286929
+    second: Unable to connect to the server__23
+  - first:
+      213: -5618735581394880440
+    second: Unable to connect to the server__24
+  - first:
+      213: 2852627996345576536
+    second: Unable to connect to the server__25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Unable to connect to the server__0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9353f8c00df65ea00800000000000000
+      internalID: 785156649400612153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88e0d2bb85796d50800000000000000
+      internalID: 6731040360942856335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 83
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f3dc70292aabc20800000000000000
+      internalID: 3223067231416827783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 82
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f821019f5c3f8c0800000000000000
+      internalID: -3966609173276094599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 83
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2761756c450aec900800000000000000
+      internalID: 706678477509039730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 83
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb0e0c83b6491b40800000000000000
+      internalID: 5411434164225182703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4a2362595422fa0800000000000000
+      internalID: -5827018460970703710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 83
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c62c8343db03dc0800000000000000
+      internalID: -3661218465063998423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__8
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e04bc2a48851cd30800000000000000
+      internalID: 4449935233508917473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__9
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbcbcfbf1444c810800000000000000
+      internalID: 1784626255498038198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 83
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82dabe556b677a440800000000000000
+      internalID: 4947053241187413288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__11
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 83
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f817501453463750800000000000000
+      internalID: 6284284358372563192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__12
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 83
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19736a430781f0e0800000000000000
+      internalID: -2237859091623741158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__13
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 83
+        width: 27
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0d2367ca9a3e1a0800000000000000
+      internalID: -6781390055707324237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__14
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f078bf9fb23ad7f0800000000000000
+      internalID: -587101002818621195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__15
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5f6bd6cb619bfa0800000000000000
+      internalID: -5784567247830321669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__16
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a71e7de65b1d130800000000000000
+      internalID: 3589849865663904332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__17
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 1
+        width: 40
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8091fca77a3bdb990800000000000000
+      internalID: -7368535883406960376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__18
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770beaee760878b70800000000000000
+      internalID: 8901224372395487351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__19
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8024f3a125a92ff0800000000000000
+      internalID: -60335556089601907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__20
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484282609bbfe8e10800000000000000
+      internalID: 2201974039921566852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__21
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 1
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c815426142a6890800000000000000
+      internalID: -7464113754895971233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__22
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d58407799219e410800000000000000
+      internalID: 1506756000668222931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__23
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cf20f5930350960800000000000000
+      internalID: 7567507771831286929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__24
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 1
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8483c1012cd3602b0800000000000000
+      internalID: -5618735581394880440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unable to connect to the server__25
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 0
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c238e7c02969720800000000000000
+      internalID: 2852627996345576536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Unable to connect to the server__0: 785156649400612153
+      Unable to connect to the server__1: 6731040360942856335
+      Unable to connect to the server__10: 4947053241187413288
+      Unable to connect to the server__11: 6284284358372563192
+      Unable to connect to the server__12: -2237859091623741158
+      Unable to connect to the server__13: -6781390055707324237
+      Unable to connect to the server__14: -587101002818621195
+      Unable to connect to the server__15: -5784567247830321669
+      Unable to connect to the server__16: 3589849865663904332
+      Unable to connect to the server__17: -7368535883406960376
+      Unable to connect to the server__18: 8901224372395487351
+      Unable to connect to the server__19: -60335556089601907
+      Unable to connect to the server__2: 3223067231416827783
+      Unable to connect to the server__20: 2201974039921566852
+      Unable to connect to the server__21: -7464113754895971233
+      Unable to connect to the server__22: 1506756000668222931
+      Unable to connect to the server__23: 7567507771831286929
+      Unable to connect to the server__24: -5618735581394880440
+      Unable to connect to the server__25: 2852627996345576536
+      Unable to connect to the server__3: -3966609173276094599
+      Unable to connect to the server__4: 706678477509039730
+      Unable to connect to the server__5: 5411434164225182703
+      Unable to connect to the server__6: -5827018460970703710
+      Unable to connect to the server__7: -3661218465063998423
+      Unable to connect to the server__8: 4449935233508917473
+      Unable to connect to the server__9: 1784626255498038198
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

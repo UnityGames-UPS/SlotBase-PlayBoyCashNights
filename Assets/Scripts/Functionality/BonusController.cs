@@ -9,8 +9,6 @@ using Spine.Unity;
 public class BonusController : MonoBehaviour
 {
   [SerializeField]
-  private Button Spin_Button;
-  [SerializeField]
   private RectTransform Wheel_Transform;
   [SerializeField]
   private BoxCollider2D[] point_colliders;
@@ -22,12 +20,6 @@ public class BonusController : MonoBehaviour
   private SlotBehaviour slotManager;
   [SerializeField]
   private AudioController _audioManager;
-  [SerializeField]
-  private GameObject PopupPanel;
-  [SerializeField]
-  private Transform Win_Transform;
-  [SerializeField]
-  private Transform Loose_Transform;
   [SerializeField]
   private SocketIOManager m_SocketManager;
   [SerializeField]
@@ -73,9 +65,6 @@ public class BonusController : MonoBehaviour
 
   private void Start()
   {
-    if (Spin_Button) Spin_Button.onClick.RemoveAllListeners();
-    if (Spin_Button) Spin_Button.onClick.AddListener(Spinbutton);
-
     slotRect = SlotReel.GetComponent<RectTransform>();
     maskRect = BonusObjectMask.GetComponent<RectTransform>();
     maskDefaultSize = maskRect.sizeDelta;
@@ -96,14 +85,10 @@ public class BonusController : MonoBehaviour
   {
     AnimateToEnd();
     ResetColliders();
-    if (PopupPanel) PopupPanel.SetActive(false);
-    if (Win_Transform) Win_Transform.gameObject.SetActive(false);
-    if (Loose_Transform) Loose_Transform.gameObject.SetActive(false);
     if (_audioManager) _audioManager.SwitchBGSound(true);
     PopulateWheel(m_SocketManager.FeaturesData.wheelBonus);
     stopIndex = stop;
     if (Bonus_Object) Bonus_Object.SetActive(true);
-    if (Spin_Button) Spin_Button.interactable = true;
 
     StartCoroutine(doCharecterAnim());
     DOVirtual.DelayedCall(7f, () =>
@@ -126,7 +111,6 @@ public class BonusController : MonoBehaviour
   {
     StopIdleWheelSpin();
     isCollision = false;
-    if (Spin_Button) Spin_Button.interactable = false;
     RotateWheel();
     DOVirtual.DelayedCall(1.5f, () =>
     {
@@ -195,17 +179,10 @@ public class BonusController : MonoBehaviour
 
     if (Bonus_Text[stopIndex].text.Equals("NO \nBONUS"))
     {
-      if (Loose_Transform) Loose_Transform.gameObject.SetActive(true);
-      if (Loose_Transform) Loose_Transform.localScale = Vector3.zero;
-      if (Loose_Transform) Loose_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(false);
     }
     else
     {
-      if (Win_Transform) Win_Transform.gameObject.SetActive(true);
-      Win_Transform.GetChild(0).GetComponent<TMP_Text>().text += m_SocketManager.ResultData.payload.bonusResult.bonuseWinAmount.ToString("F3");
-      if (Win_Transform) Win_Transform.localScale = Vector3.zero;
-      if (Win_Transform) Win_Transform.DOScale(Vector3.one, 1f);
       PlayWinLooseSound(true);
     }
 
@@ -225,7 +202,6 @@ public class BonusController : MonoBehaviour
     DOVirtual.DelayedCall(3f, () =>
     {
       uIManager.StopWheelborderAnim();
-      if (PopupPanel) PopupPanel.SetActive(false);
       AnimateToStart();
       DOVirtual.DelayedCall(1f, () =>
       {

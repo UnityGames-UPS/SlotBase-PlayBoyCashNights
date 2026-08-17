@@ -1,0 +1,1573 @@
+fileFormatVersion: 2
+guid: b14c593ae942d4307a0f49d1ce98aad7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3472635426383977538
+    second: Your account balance is running low. Please add funds to keep p_0
+  - first:
+      213: -6446897000762079745
+    second: Your account balance is running low. Please add funds to keep p_1
+  - first:
+      213: -5921033626747871834
+    second: Your account balance is running low. Please add funds to keep p_2
+  - first:
+      213: 7645005921161821725
+    second: Your account balance is running low. Please add funds to keep p_3
+  - first:
+      213: -2314637505820553258
+    second: Your account balance is running low. Please add funds to keep p_4
+  - first:
+      213: 8138626435283255059
+    second: Your account balance is running low. Please add funds to keep p_5
+  - first:
+      213: 4876619936179737603
+    second: Your account balance is running low. Please add funds to keep p_6
+  - first:
+      213: -3655439271969973763
+    second: Your account balance is running low. Please add funds to keep p_7
+  - first:
+      213: -93650796530545995
+    second: Your account balance is running low. Please add funds to keep p_8
+  - first:
+      213: 2281405065219832047
+    second: Your account balance is running low. Please add funds to keep p_9
+  - first:
+      213: -7135775240704644238
+    second: Your account balance is running low. Please add funds to keep p_10
+  - first:
+      213: 2705947319070195193
+    second: Your account balance is running low. Please add funds to keep p_11
+  - first:
+      213: 3824314191859498227
+    second: Your account balance is running low. Please add funds to keep p_12
+  - first:
+      213: -9212055294836313861
+    second: Your account balance is running low. Please add funds to keep p_13
+  - first:
+      213: 81254346659862045
+    second: Your account balance is running low. Please add funds to keep p_14
+  - first:
+      213: -3663217285948691135
+    second: Your account balance is running low. Please add funds to keep p_15
+  - first:
+      213: -4353906332895556576
+    second: Your account balance is running low. Please add funds to keep p_16
+  - first:
+      213: -3099856078763354952
+    second: Your account balance is running low. Please add funds to keep p_17
+  - first:
+      213: -6797691112883695798
+    second: Your account balance is running low. Please add funds to keep p_18
+  - first:
+      213: 8441851869179995594
+    second: Your account balance is running low. Please add funds to keep p_19
+  - first:
+      213: -3764000650572180497
+    second: Your account balance is running low. Please add funds to keep p_20
+  - first:
+      213: 3151103661938075848
+    second: Your account balance is running low. Please add funds to keep p_21
+  - first:
+      213: -8267618942619306026
+    second: Your account balance is running low. Please add funds to keep p_22
+  - first:
+      213: -4123146999950942808
+    second: Your account balance is running low. Please add funds to keep p_23
+  - first:
+      213: 710023735620708059
+    second: Your account balance is running low. Please add funds to keep p_24
+  - first:
+      213: 2296805687788626481
+    second: Your account balance is running low. Please add funds to keep p_25
+  - first:
+      213: -47149377721093069
+    second: Your account balance is running low. Please add funds to keep p_26
+  - first:
+      213: 8357795356196508103
+    second: Your account balance is running low. Please add funds to keep p_27
+  - first:
+      213: 1244956477206406853
+    second: Your account balance is running low. Please add funds to keep p_28
+  - first:
+      213: 5710858623683952891
+    second: Your account balance is running low. Please add funds to keep p_29
+  - first:
+      213: 800996027460263795
+    second: Your account balance is running low. Please add funds to keep p_30
+  - first:
+      213: -119404430464852043
+    second: Your account balance is running low. Please add funds to keep p_31
+  - first:
+      213: -149460364535937422
+    second: Your account balance is running low. Please add funds to keep p_32
+  - first:
+      213: -2357820099265419405
+    second: Your account balance is running low. Please add funds to keep p_33
+  - first:
+      213: 373432729301680330
+    second: Your account balance is running low. Please add funds to keep p_34
+  - first:
+      213: 3546099935391263015
+    second: Your account balance is running low. Please add funds to keep p_35
+  - first:
+      213: -8888591485422085104
+    second: Your account balance is running low. Please add funds to keep p_36
+  - first:
+      213: -642375417810828586
+    second: Your account balance is running low. Please add funds to keep p_37
+  - first:
+      213: -3477184733196011721
+    second: Your account balance is running low. Please add funds to keep p_38
+  - first:
+      213: -8901868216543387375
+    second: Your account balance is running low. Please add funds to keep p_39
+  - first:
+      213: -419539553284979973
+    second: Your account balance is running low. Please add funds to keep p_40
+  - first:
+      213: 8439672432796993754
+    second: Your account balance is running low. Please add funds to keep p_41
+  - first:
+      213: -1785808904266207271
+    second: Your account balance is running low. Please add funds to keep p_42
+  - first:
+      213: -8190914391930091883
+    second: Your account balance is running low. Please add funds to keep p_43
+  - first:
+      213: -328379067001533722
+    second: Your account balance is running low. Please add funds to keep p_44
+  - first:
+      213: -8758483105077505880
+    second: Your account balance is running low. Please add funds to keep p_45
+  - first:
+      213: 3113284818026478808
+    second: Your account balance is running low. Please add funds to keep p_46
+  - first:
+      213: -8128699729008633035
+    second: Your account balance is running low. Please add funds to keep p_47
+  - first:
+      213: -2221567637878587977
+    second: Your account balance is running low. Please add funds to keep p_48
+  - first:
+      213: -3048378080733958882
+    second: Your account balance is running low. Please add funds to keep p_49
+  - first:
+      213: -5061910710049367840
+    second: Your account balance is running low. Please add funds to keep p_50
+  - first:
+      213: -6999329205297654372
+    second: Your account balance is running low. Please add funds to keep p_51
+  - first:
+      213: 8868566345330939448
+    second: Your account balance is running low. Please add funds to keep p_52
+  - first:
+      213: 6385774398941279516
+    second: Your account balance is running low. Please add funds to keep p_53
+  - first:
+      213: 8668428492020542505
+    second: Your account balance is running low. Please add funds to keep p_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 133
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24cdd008587413030800000000000000
+      internalID: 3472635426383977538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 132
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff58b0eb5550886a0800000000000000
+      internalID: -6446897000762079745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_2
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 132
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6addc86994344dda0800000000000000
+      internalID: -5921033626747871834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 133
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ebb9c5164881a60800000000000000
+      internalID: 7645005921161821725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 133
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df05c1b371c0efd0800000000000000
+      internalID: -2314637505820553258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 132
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f79a26f9532f070800000000000000
+      internalID: 8138626435283255059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 132
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 304d4989efb3da340800000000000000
+      internalID: 4876619936179737603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 132
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df997387955454dc0800000000000000
+      internalID: -3655439271969973763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_8
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 132
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba4dd3c81943bef0800000000000000
+      internalID: -93650796530545995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 133
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe87435c1dd29af10800000000000000
+      internalID: 2281405065219832047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 132
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ba5ccb932a8fc90800000000000000
+      internalID: -7135775240704644238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 133
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd791effb47d8520800000000000000
+      internalID: 2705947319070195193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_12
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 133
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fc3543de71b21530800000000000000
+      internalID: 3824314191859498227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 133
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf076045484382080800000000000000
+      internalID: -9212055294836313861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_14
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 133
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d161e15d56ca02100800000000000000
+      internalID: 81254346659862045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_15
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 133
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d25f77943a92dc0800000000000000
+      internalID: -3663217285948691135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_16
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 132
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02ccf6a1241d393c0800000000000000
+      internalID: -4353906332895556576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_17
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 132
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b49972f1591bf4d0800000000000000
+      internalID: -3099856078763354952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_18
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 133
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fccb3d2ffb9a1a0800000000000000
+      internalID: -6797691112883695798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_19
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 133
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5e0f45c8b772570800000000000000
+      internalID: 8441851869179995594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe35e40d95593cbc0800000000000000
+      internalID: -3764000650572180497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 73
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c86044d518fabb20800000000000000
+      internalID: 3151103661938075848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_22
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 74
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7b2ea1064834d80800000000000000
+      internalID: -8267618942619306026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_23
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 74
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8add43f16a3a7c6c0800000000000000
+      internalID: -4123146999950942808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_24
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 74
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6a4cf53d28ad900800000000000000
+      internalID: 710023735620708059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 57
+        width: 64
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132ecb2aa94efdf10800000000000000
+      internalID: 2296805687788626481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_26
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 73
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334bd8904ed785ff0800000000000000
+      internalID: -47149377721093069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_27
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 74
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1908f489adcf370800000000000000
+      internalID: 8357795356196508103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_28
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 72
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6a5b8e159f64110800000000000000
+      internalID: 1244956477206406853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_29
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 74
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0882b29ab014f40800000000000000
+      internalID: 5710858623683952891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_30
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 73
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f9443a4a5bd1b00800000000000000
+      internalID: 800996027460263795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_31
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 74
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfd8899d4ac75ef0800000000000000
+      internalID: -119404430464852043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_32
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 74
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 276c5df17920dedf0800000000000000
+      internalID: -149460364535937422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_33
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 73
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377220bac17574fd0800000000000000
+      internalID: -2357820099265419405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_34
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 74
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac00889b613be2500800000000000000
+      internalID: 373432729301680330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_35
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 74
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729280b6a17463130800000000000000
+      internalID: 3546099935391263015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_36
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 74
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cdad5432165a480800000000000000
+      internalID: -8888591485422085104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_37
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 16
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d241f006f2d517f0800000000000000
+      internalID: -642375417810828586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_38
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 15
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737b07778ee8ebfc0800000000000000
+      internalID: -3477184733196011721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_39
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 16
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111679b6506367480800000000000000
+      internalID: -8901868216543387375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_40
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 16
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf20935cffe7d2af0800000000000000
+      internalID: -419539553284979973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_41
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 16
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad88581cc5dbf1570800000000000000
+      internalID: 8439672432796993754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_42
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 15
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dfab7063488737e0800000000000000
+      internalID: -1785808904266207271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_43
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 15
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5964f5302c6045e80800000000000000
+      internalID: -8190914391930091883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_44
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 16
+        width: 29
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea03b77afc517bf0800000000000000
+      internalID: -328379067001533722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_45
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 15
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a05896350e937680800000000000000
+      internalID: -8758483105077505880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_46
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 15
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcb51f0c0c943b20800000000000000
+      internalID: 3113284818026478808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_47
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 4
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b50a60aae013f80800000000000000
+      internalID: -8128699729008633035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_48
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 4
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd3eb3f0086b21e0800000000000000
+      internalID: -2221567637878587977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_49
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 16
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1de3cc594cf1b5d0800000000000000
+      internalID: -3048378080733958882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_50
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e813c2470b70c9b0800000000000000
+      internalID: -5061910710049367840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_51
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 16
+        width: 14
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95573cfb236dde90800000000000000
+      internalID: -6999329205297654372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_52
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 16
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8365f687a1a731b70800000000000000
+      internalID: 8868566345330939448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_53
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15bda88bf3de9850800000000000000
+      internalID: 6385774398941279516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Your account balance is running low. Please add funds to keep p_54
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 14
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c62c349c17c4870800000000000000
+      internalID: 8668428492020542505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Your account balance is running low. Please add funds to keep p_0: 3472635426383977538
+      Your account balance is running low. Please add funds to keep p_1: -6446897000762079745
+      Your account balance is running low. Please add funds to keep p_10: -7135775240704644238
+      Your account balance is running low. Please add funds to keep p_11: 2705947319070195193
+      Your account balance is running low. Please add funds to keep p_12: 3824314191859498227
+      Your account balance is running low. Please add funds to keep p_13: -9212055294836313861
+      Your account balance is running low. Please add funds to keep p_14: 81254346659862045
+      Your account balance is running low. Please add funds to keep p_15: -3663217285948691135
+      Your account balance is running low. Please add funds to keep p_16: -4353906332895556576
+      Your account balance is running low. Please add funds to keep p_17: -3099856078763354952
+      Your account balance is running low. Please add funds to keep p_18: -6797691112883695798
+      Your account balance is running low. Please add funds to keep p_19: 8441851869179995594
+      Your account balance is running low. Please add funds to keep p_2: -5921033626747871834
+      Your account balance is running low. Please add funds to keep p_20: -3764000650572180497
+      Your account balance is running low. Please add funds to keep p_21: 3151103661938075848
+      Your account balance is running low. Please add funds to keep p_22: -8267618942619306026
+      Your account balance is running low. Please add funds to keep p_23: -4123146999950942808
+      Your account balance is running low. Please add funds to keep p_24: 710023735620708059
+      Your account balance is running low. Please add funds to keep p_25: 2296805687788626481
+      Your account balance is running low. Please add funds to keep p_26: -47149377721093069
+      Your account balance is running low. Please add funds to keep p_27: 8357795356196508103
+      Your account balance is running low. Please add funds to keep p_28: 1244956477206406853
+      Your account balance is running low. Please add funds to keep p_29: 5710858623683952891
+      Your account balance is running low. Please add funds to keep p_3: 7645005921161821725
+      Your account balance is running low. Please add funds to keep p_30: 800996027460263795
+      Your account balance is running low. Please add funds to keep p_31: -119404430464852043
+      Your account balance is running low. Please add funds to keep p_32: -149460364535937422
+      Your account balance is running low. Please add funds to keep p_33: -2357820099265419405
+      Your account balance is running low. Please add funds to keep p_34: 373432729301680330
+      Your account balance is running low. Please add funds to keep p_35: 3546099935391263015
+      Your account balance is running low. Please add funds to keep p_36: -8888591485422085104
+      Your account balance is running low. Please add funds to keep p_37: -642375417810828586
+      Your account balance is running low. Please add funds to keep p_38: -3477184733196011721
+      Your account balance is running low. Please add funds to keep p_39: -8901868216543387375
+      Your account balance is running low. Please add funds to keep p_4: -2314637505820553258
+      Your account balance is running low. Please add funds to keep p_40: -419539553284979973
+      Your account balance is running low. Please add funds to keep p_41: 8439672432796993754
+      Your account balance is running low. Please add funds to keep p_42: -1785808904266207271
+      Your account balance is running low. Please add funds to keep p_43: -8190914391930091883
+      Your account balance is running low. Please add funds to keep p_44: -328379067001533722
+      Your account balance is running low. Please add funds to keep p_45: -8758483105077505880
+      Your account balance is running low. Please add funds to keep p_46: 3113284818026478808
+      Your account balance is running low. Please add funds to keep p_47: -8128699729008633035
+      Your account balance is running low. Please add funds to keep p_48: -2221567637878587977
+      Your account balance is running low. Please add funds to keep p_49: -3048378080733958882
+      Your account balance is running low. Please add funds to keep p_5: 8138626435283255059
+      Your account balance is running low. Please add funds to keep p_50: -5061910710049367840
+      Your account balance is running low. Please add funds to keep p_51: -6999329205297654372
+      Your account balance is running low. Please add funds to keep p_52: 8868566345330939448
+      Your account balance is running low. Please add funds to keep p_53: 6385774398941279516
+      Your account balance is running low. Please add funds to keep p_54: 8668428492020542505
+      Your account balance is running low. Please add funds to keep p_6: 4876619936179737603
+      Your account balance is running low. Please add funds to keep p_7: -3655439271969973763
+      Your account balance is running low. Please add funds to keep p_8: -93650796530545995
+      Your account balance is running low. Please add funds to keep p_9: 2281405065219832047
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

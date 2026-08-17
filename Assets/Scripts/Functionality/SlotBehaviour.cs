@@ -48,34 +48,16 @@ public class SlotBehaviour : MonoBehaviour
   [SerializeField] private Button StopSpin_Button;
 
   [Header("Animated Sprites")]
-  [SerializeField]
-  private Sprite[] Bonus_Sprite;
-  [SerializeField]
-  private Sprite[] symbolNine;
-  [SerializeField]
-  private Sprite[] Jackpot_Sprite;
-  [SerializeField]
-  private Sprite[] symbolFive;
-  [SerializeField]
-  private Sprite[] symbolSix;
-  [SerializeField]
-  private Sprite[] symbolSeven;
-  [SerializeField]
-  private Sprite[] symbolEight;
-  [SerializeField]
-  private Sprite[] symbolZero;
-  [SerializeField]
-  private Sprite[] symbolOne;
-  [SerializeField]
-  private Sprite[] symbolTwo;
-  [SerializeField]
-  private Sprite[] symbolThree;
-  [SerializeField]
-  private Sprite[] symbolFour;
-  [SerializeField]
-  private Sprite[] Scatter_Sprite;
-  [SerializeField]
-  private Sprite[] Wild_Sprite;
+  [SerializeField] private Sprite[] symbolZero;
+  [SerializeField] private Sprite[] symbolOne;
+  [SerializeField] private Sprite[] symbolTwo;
+  [SerializeField] private Sprite[] symbolThree;
+  [SerializeField] private Sprite[] symbolFour;
+  [SerializeField] private Sprite[] symbolFive;
+  [SerializeField] private Sprite[] symbolSix;
+  [SerializeField] private Sprite[] symbolSeven;
+  [SerializeField] private Sprite[] symbolEight;
+  [SerializeField] private Sprite[] symbolNine;
 
   [Header("Miscellaneous UI")]
   [SerializeField]
@@ -448,53 +430,61 @@ public class SlotBehaviour : MonoBehaviour
     {
       case 0:
         selectedSprites = symbolZero;
+        animScript.AnimationSpeed = 20;
         animScript.ScaleSize = 1f;
         break;
 
       case 1:
         selectedSprites = symbolOne;
+        animScript.AnimationSpeed = 11;
         animScript.ScaleSize = 1f;
         break;
 
       case 2:
         selectedSprites = symbolTwo;
+        animScript.AnimationSpeed = 34;
         animScript.ScaleSize = 1.1f;
         break;
 
       case 3:
         selectedSprites = symbolThree;
+        animScript.AnimationSpeed = 34;
         animScript.ScaleSize = 1.6f;
         break;
 
       case 4:
         selectedSprites = symbolFour;
+        animScript.AnimationSpeed = 34;
         animScript.ScaleSize = 1.3f;
         break;
       case 5:
         selectedSprites = symbolFive;
+        animScript.AnimationSpeed = 15;
         animScript.ScaleSize = 1.4f;
         break;
 
       case 6:
         selectedSprites = symbolSix;
+        animScript.AnimationSpeed = 40;
         animScript.ScaleSize = 1.6f;
         break;
 
       case 7:
         selectedSprites = symbolSeven;
+        animScript.AnimationSpeed = 40;
         animScript.ScaleSize = 2.5f;
         break;
 
       case 8:
         selectedSprites = symbolEight;
+        animScript.AnimationSpeed = 40;
         animScript.ScaleSize = 1.9f;
         break;
       case 9:
         selectedSprites = symbolNine;
+        animScript.AnimationSpeed = 34;
         animScript.ScaleSize = 1.9f;
         break;
-
-
     }
 
     if (selectedSprites == null) return;
@@ -904,7 +894,7 @@ public class SlotBehaviour : MonoBehaviour
     ImageAnimation temp = animObjects.GetComponent<ImageAnimation>();
     temp.StartAnimation();
 
-    temp.ScaleUp();
+    // temp.ScaleUp();
     // RectTransform rect = animObjects.GetComponent<RectTransform>();
     // rect.localScale = new Vector3(1.2f, 1.2f, 1f);
     TempList.Add(temp);
