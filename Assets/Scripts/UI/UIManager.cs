@@ -90,23 +90,6 @@ public class UIManager : MonoBehaviour
   [SerializeField]
   private GameObject SoundOff_Object;
 
-  [Header("Win Popup")]
-  [SerializeField]
-  private List<Sprite> BigWin_Sprite;
-  [SerializeField]
-  private List<Sprite> HugeWin_Sprite;
-  [SerializeField]
-  private List<Sprite> MegaWin_Sprite;
-  [SerializeField]
-  private Sprite Jackpot_Sprite;
-  [SerializeField] private ImageAnimation Win_Image;
-  [SerializeField] private ImageAnimation LuckyGirl;
-  [SerializeField]
-  private GameObject WinPopup_Object;
-  [SerializeField]
-  private TMP_Text Win_Text;
-  [SerializeField] private Button SkipWinAnimation;
-
   [Header("FreeSpins Popup")]
   [SerializeField]
   private GameObject FreeSpinPopup_Object;
@@ -191,8 +174,6 @@ public class UIManager : MonoBehaviour
   private bool isMusic = true;
   private bool isSound = true;
   private bool isForceMuted = false;
-  private Tween WinPopupTextTween;
-  private Tween ClosePopupTween;
   internal bool isExit = false;
   internal int FreeSpins;
 
@@ -297,9 +278,6 @@ public class UIManager : MonoBehaviour
     if (Music_Button) Music_Button.onClick.RemoveAllListeners();
     if (Music_Button) Music_Button.onClick.AddListener(ToggleMusic);
 
-    if (SkipWinAnimation) SkipWinAnimation.onClick.RemoveAllListeners();
-    if (SkipWinAnimation) SkipWinAnimation.onClick.AddListener(SkipWin);
-
     if (LeftNavBtn) LeftNavBtn.onClick.RemoveAllListeners();
     if (LeftNavBtn) LeftNavBtn.onClick.AddListener(PreviousPage);
 
@@ -338,37 +316,6 @@ public class UIManager : MonoBehaviour
   }
 
 
-  internal void PopulateWin(int value, double amount)
-  {
-    List<Sprite> selectedSprites = null;
-
-    switch (value)
-    {
-      case 1: { selectedSprites = BigWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
-      case 2: { selectedSprites = BigWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
-      case 3: { selectedSprites = HugeWin_Sprite; Win_Image.AnimationSpeed = 100; } break;
-    }
-
-    // Guard: don't proceed if no valid sprites
-    if (selectedSprites == null || selectedSprites.Count == 0)
-    {
-      Debug.LogWarning("PopulateWin: no sprites for value " + value);
-      slotManager.CheckPopups = false; // unblock the spin flow
-      return;
-    }
-
-    // Copy sprites instead of direct reference assignment
-    Win_Image.textureArray.Clear();
-    Win_Image.textureArray.TrimExcess();
-    for (int i = 0; i < selectedSprites.Count; i++)
-    {
-      Win_Image.textureArray.Add(selectedSprites[i]);
-    }
-
-    Win_Image.StartAnimation();
-    LuckyGirl.StartAnimation();
-    StartPopupAnim(amount);
-  }
   private void StartFreeSpins(int spins)
   {
     // if (MainPopup_Object) MainPopup_Object.SetActive(false);
@@ -389,44 +336,6 @@ public class UIManager : MonoBehaviour
     DOVirtual.DelayedCall(1.5f, () =>
     {
       StartFreeSpins(spins);
-    });
-  }
-
-  void SkipWin()
-  {
-    Debug.Log("Skip win called");
-    if (ClosePopupTween != null)
-    {
-      ClosePopupTween.Kill();
-      ClosePopupTween = null;
-    }
-    if (WinPopupTextTween != null)
-    {
-      WinPopupTextTween.Kill();
-      WinPopupTextTween = null;
-    }
-    ClosePopup(WinPopup_Object);
-    slotManager.CheckPopups = false;
-  }
-
-  private void StartPopupAnim(double amount)
-  {
-    if (WinPopup_Object) WinPopup_Object.SetActive(true);
-    SpriteNumberText Text = Win_Text.gameObject.GetComponent<SpriteNumberText>();
-    Text.AnimateFromZero(amount);
-    slotManager.AnimateNormalText(amount);
-    audioController.PlayWLAudio("phone");
-    // // if (MainPopup_Object) MainPopup_Object.SetActive(true);
-    // WinPopupTextTween = DOTween.To(() => initAmount, (val) => initAmount = val, amount, 1f).OnUpdate(() =>
-    // {
-    //   if (Win_Text) Win_Text.text = initAmount.ToString("F3");
-    // });
-
-    ClosePopupTween = DOVirtual.DelayedCall(4f, () =>
-    {
-      // ClosePopup(WinPopup_Object);
-      if (WinPopup_Object) WinPopup_Object.SetActive(false);
-      slotManager.CheckPopups = false;
     });
   }
 
@@ -492,8 +401,8 @@ public class UIManager : MonoBehaviour
   }
   private void PopulateSymbolsPayout(Paylines paylines)
   {
-    double betPerLine = 1;
-    //double betPerLine = socketManager.InitialData.bets[slotManager.BetCounter];
+    // double betPerLine = 1;
+    double betPerLine = socketManager.InitialData.bets[slotManager.BetCounter];
     SymbolsText[0].text = (paylines.symbols[6].multiplier[0] * betPerLine).ToString();
     SymbolsText[1].text = (paylines.symbols[7].multiplier[0] * betPerLine).ToString();
     SymbolsText[2].text = (paylines.symbols[1].multiplier[0] * betPerLine).ToString();
@@ -504,8 +413,6 @@ public class UIManager : MonoBehaviour
     SymbolsText[7].text = socketManager.FeaturesData.specialWins.anyBar.pay.ToString();
     SymbolsText[8].text = (paylines.symbols[5].multiplier[1] * betPerLine).ToString();
     SymbolsText[9].text = (paylines.symbols[5].multiplier[2] * betPerLine).ToString();
-
-
   }
   private void NextPage()
   {

@@ -81,8 +81,10 @@ public class CoinFountainPool : GenericObjectPool<CoinFountainItem>
   // Fades out every active coin but keeps them flipping (and the fountain keeps spawning).
   internal void FadeOutAllActive(float duration)
   {
-    foreach (CoinFountainItem item in ItemsInUse)
+    // Reverse index walk: a coin's arc can complete and return itself mid-iteration.
+    for (int i = ItemsInUse.Count - 1; i >= 0; i--)
     {
+      CoinFountainItem item = ItemsInUse[i];
       if (item != null) item.FadeOut(duration);
     }
   }
@@ -102,8 +104,9 @@ public class CoinFountainPool : GenericObjectPool<CoinFountainItem>
 
   internal override void ReturnAllItemsToPool()
   {
-    foreach (CoinFountainItem item in ItemsInUse)
+    for (int i = ItemsInUse.Count - 1; i >= 0; i--)
     {
+      CoinFountainItem item = ItemsInUse[i];
       if (item != null) item.ResetState();
     }
     base.ReturnAllItemsToPool();

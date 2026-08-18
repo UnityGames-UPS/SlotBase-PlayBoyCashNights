@@ -63,9 +63,7 @@ public class SlotBehaviour : MonoBehaviour
   private TMP_Text LineBet_text;
   [SerializeField]
   private TMP_Text TotalWin_text;
-  [SerializeField] private GameObject SmallWinObj;
-  [SerializeField] private ImageAnimation CoinSplash;
-  [SerializeField] private SpriteNumberText SmallwinText;
+  [SerializeField] private WinCelebrationController winCelebration;
   [Header("Audio Management")]
   [SerializeField]
   private AudioController audioController;
@@ -137,6 +135,9 @@ public class SlotBehaviour : MonoBehaviour
   private void Start()
   {
     IsAutoSpin = false;
+
+    //random symbols on every strip cell outside the result matrix
+    ShuffleInitialMatrix();
 
     for (int i = 0; i < numberOfSlots; i++)
     {
@@ -365,17 +366,73 @@ public class SlotBehaviour : MonoBehaviour
   }
 
   #region InitialFunctions
-  // internal void shuffleInitialMatrix()
-  // {
-  //   for (int i = 0; i < Tempimages.Count; i++)
-  //   {
-  //     for (int j = 0; j < 3; j++)
-  //     {
-  //       int randomIndex = UnityEngine.Random.Range(0, 14);
-  //       Tempimages[i].slotImages[j].sprite = myImages[randomIndex];
-  //     }
-  //   }
-  // }
+  //per column, the strip cells that are NOT part of the visible result matrix (Tempimages).
+  //those are free to hold any random symbol; the result cells must never be overwritten.
+  private List<List<Image>> fillerImages;
+
+  private void CacheFillerImages()
+  {
+    if (fillerImages != null) return;
+
+    HashSet<Image> resultCells = new HashSet<Image>();
+    for (int col = 0; col < Tempimages.Count; col++)
+    {
+      for (int row = 0; row < Tempimages[col].slotImages.Count; row++)
+      {
+        Image cell = Tempimages[col].slotImages[row];
+        if (cell) resultCells.Add(cell);
+      }
+    }
+
+    fillerImages = new List<List<Image>>(images.Count);
+    for (int col = 0; col < images.Count; col++)
+    {
+      List<Image> fillers = new List<Image>();
+      for (int row = 0; row < images[col].slotImages.Count; row++)
+      {
+        Image cell = images[col].slotImages[row];
+        if (cell && !resultCells.Contains(cell)) fillers.Add(cell);
+      }
+      fillerImages.Add(fillers);
+    }
+  }
+
+  //init only - randomises the whole strip, result cells included, so nothing is left showing
+  //the sprites baked into the scene. Mid-spin the result cells are left alone (see ShuffleColumn).
+  internal void ShuffleInitialMatrix()
+  {
+    if (myImages == null || myImages.Length == 0) return;
+
+    CacheFillerImages();
+    for (int col = 0; col < fillerImages.Count; col++)
+    {
+      ShuffleColumn(col);
+    }
+
+    for (int col = 0; col < Tempimages.Count; col++)
+    {
+      for (int row = 0; row < Tempimages[col].slotImages.Count; row++)
+      {
+        Image cell = Tempimages[col].slotImages[row];
+        if (cell) cell.sprite = myImages[UnityEngine.Random.Range(0, myImages.Length)];
+      }
+    }
+  }
+
+  //randomises the non-result cells of a single column - called each time a spinning
+  //column wraps back to the top so the strip never repeats the same symbol order
+  private void ShuffleColumn(int col)
+  {
+    if (myImages == null || myImages.Length == 0) return;
+    CacheFillerImages();
+    if (col < 0 || col >= fillerImages.Count) return;
+
+    List<Image> cells = fillerImages[col];
+    for (int i = 0; i < cells.Count; i++)
+    {
+      if (cells[i]) cells[i].sprite = myImages[UnityEngine.Random.Range(0, myImages.Length)];
+    }
+  }
 
 
   internal void InitializeMatrix()
@@ -398,6 +455,9 @@ public class SlotBehaviour : MonoBehaviour
         }
       }
     }
+
+    //fill the rest of the strips with random symbols so the reels don't start out identical
+    ShuffleInitialMatrix();
   }
 
 
@@ -504,6 +564,12 @@ public class SlotBehaviour : MonoBehaviour
   {
     Debug.Log("StartButtonClicked");
     if (audioController) audioController.PlaySpinButtonAudio();
+    // Any celebration still on screen is skipped/reset here — this covers the spin button,
+    // auto-spin and free-spin paths, which all funnel through StartSlots. It has to run BEFORE
+    // the reset below: skipping fires the finished-callback, which writes the previous win into
+    // TotalWin_text, and a new spin must end up showing 0.
+    if (winCelebration) winCelebration.SkipAndReset();
+    StopNormalTextAnim();
     if (TotalWin_text) TotalWin_text.text = "0.000";
 
     if (!autoSpin)
@@ -529,7 +595,6 @@ public class SlotBehaviour : MonoBehaviour
   //manage the Routine for spinning of the slots
   private IEnumerator TweenRoutine()
   {
-    SmallWinObj.SetActive(false);
     uiManager.PlayRellsLoop(false);
     if (currentBalance < currentTotalBet && !IsFreeSpin)
     {
@@ -539,6 +604,7 @@ public class SlotBehaviour : MonoBehaviour
       ToggleButtonGrp(true);
       yield break;
     }
+    audioController.StopWLAaudio();
     if (audioController) audioController.PlayWLAudio("spin");
     CheckSpinAudio = true;
 
@@ -641,7 +707,7 @@ public class SlotBehaviour : MonoBehaviour
 
     // if (SocketManager.ResultData.jackpot.isTriggered)
     // {
-    //   uiManager.PopulateWin(4, SocketManager.ResultData.jackpot.amount);
+    //   winCelebration.Play(3, SocketManager.ResultData.jackpot.amount, () => CheckPopups = false);
     //   yield return new WaitUntil(() => !CheckPopups);
     //   CheckPopups = true;
     // }
@@ -658,11 +724,6 @@ public class SlotBehaviour : MonoBehaviour
     // CheckPopups = false;
     yield return new WaitUntil(() => !CheckPopups);
 
-    if (SocketManager.ResultData.payload.winAmount > 0)
-    {
-      yield return new WaitForSeconds(2f);
-      SmallWinObj.SetActive(false);
-    }
     BalanceTween?.Kill();
     if (Balance_text) Balance_text.text = SocketManager.ResultData.player.balance.ToString("F3");
 
@@ -698,13 +759,6 @@ public class SlotBehaviour : MonoBehaviour
     // }
   }
 
-  private void ShowSmallWin(double winAmount)
-  {
-    SmallWinObj.SetActive(true);
-    CoinSplash.StartAnimation();
-    SmallwinText.AnimateFromZero(winAmount);
-    AnimateNormalText(winAmount);
-  }
   private void CheckForFeaturesAnimation()
   {
     bool playJackpot = false;
@@ -782,21 +836,37 @@ public class SlotBehaviour : MonoBehaviour
 
   internal void CheckWinPopups()
   {
-    if (SocketManager.ResultData.payload.winAmount >= currentTotalBet * 5 && SocketManager.ResultData.payload.winAmount < currentTotalBet * 10)
+    double win = SocketManager.ResultData.payload.winAmount;
+
+    int tier = 0;
+    if (win >= currentTotalBet * 10) tier = 3;
+    else if (win >= currentTotalBet * 5) tier = 2;
+    else if (win >= currentTotalBet * 2) tier = 1;
+
+    // A tiered win drives the UI counter at the celebration's own lerp speed so the two numbers
+    // finish together; an untiered win has nothing to sync with and keeps the default duration.
+    if (win > 0)
     {
-      uiManager.PopulateWin(1, SocketManager.ResultData.payload.winAmount);
+      float duration = (tier > 0 && winCelebration) ? winCelebration.GetLerpDuration(tier) : -1f;
+      AnimateNormalText(win, duration);
     }
-    else if (SocketManager.ResultData.payload.winAmount >= currentTotalBet * 10 && SocketManager.ResultData.payload.winAmount < currentTotalBet * 15)
+
+    // Tiers 2 and 3 hold the spin flow until the celebration finishes or the player skips it.
+    // Tier 1 is text-only and non-blocking — the next spin simply resets it.
+    if (tier >= 2)
     {
-      uiManager.PopulateWin(2, SocketManager.ResultData.payload.winAmount);
-    }
-    else if (SocketManager.ResultData.payload.winAmount >= currentTotalBet * 15)
-    {
-      uiManager.PopulateWin(3, SocketManager.ResultData.payload.winAmount);
+      winCelebration.Play(tier, win, () =>
+      {
+        //fires on natural finish and on skip alike; on a skip this is what stops the UI counter
+        //mid-crawl and shows the real amount, on a natural finish it's a harmless re-set
+        SetNormalTextFinal(win);
+        CheckPopups = false;
+      });
     }
     else
     {
-      if (SocketManager.ResultData.payload.winAmount > 0) ShowSmallWin(SocketManager.ResultData.payload.winAmount);
+      if (tier == 1) winCelebration.Play(1, win);
+      if (tier == 0 && win > 0) audioController.PlayWLAudio("win");
       CheckPopups = false;
     }
   }
@@ -809,58 +879,37 @@ public class SlotBehaviour : MonoBehaviour
   }
 
   //generate the payout lines generated 
-  private void CheckPayoutLineBackend(List<int> LineId, double jackpot = 0)
+  private void CheckPayoutLineBackend(List<int> LineId)
   {
     if (LineId.Count > 0)
     {
-      if (jackpot <= 0)
-      {
-        if (audioController) audioController.PlayWLAudio("win");
-      }
-
       for (int i = 0; i < LineId.Count; i++)
       {
         PayCalculator.GeneratePayoutLinesBackend(LineId[i]);
       }
 
-      if (jackpot > 0)
+      List<KeyValuePair<int, int>> coords = new();
+      for (int j = 0; j < LineId.Count; j++)
       {
-        if (audioController) audioController.PlayWLAudio("megaWin");
-        for (int i = 0; i < Tempimages.Count; i++)
+        for (int k = 0; k < 3; k++)
         {
-          for (int k = 0; k < Tempimages[i].slotImages.Count; k++)
-          {
-            StartGameAnimation(Tempimages[i].slotImages[k].gameObject);
-          }
+          int rowIndex = SocketManager.InitialData.lines[LineId[j]][k];
+          int columnIndex = k;
+          coords.Add(new KeyValuePair<int, int>(rowIndex, columnIndex));
         }
       }
-      else
-      {
-        List<KeyValuePair<int, int>> coords = new();
-        for (int j = 0; j < LineId.Count; j++)
-        {
-          for (int k = 0; k < 3; k++)
-          {
-            int rowIndex = SocketManager.InitialData.lines[LineId[j]][k];
-            int columnIndex = k;
-            coords.Add(new KeyValuePair<int, int>(rowIndex, columnIndex));
-          }
-        }
 
-        foreach (var coord in coords)
-        {
-          int rowIndex = coord.Key;
-          int columnIndex = coord.Value;
-          StartGameAnimation(Tempimages[columnIndex].slotImages[rowIndex].gameObject);
-        }
+      foreach (var coord in coords)
+      {
+        int rowIndex = coord.Key;
+        int columnIndex = coord.Value;
+        StartGameAnimation(Tempimages[columnIndex].slotImages[rowIndex].gameObject);
       }
       WinningsAnim(true);
     }
     else
     {
-
-      //if (audioController) audioController.PlayWLAudio("lose");
-      if (audioController) audioController.StopWLAaudio();
+      if (audioController) audioController.PlayWLAudio("lose");
     }
     CheckSpinAudio = false;
   }
@@ -934,9 +983,12 @@ public class SlotBehaviour : MonoBehaviour
     seq.AppendCallback(() =>
     {
       slotTransform.localPosition = new Vector2(slotTransform.localPosition.x, SpinTopY);
+      //the strip has just wrapped to the top - reshuffle it before it scrolls back into view
+      ShuffleColumn(index);
       Tweener tweener = slotTransform.DOLocalMoveY(SpinBottomY, DurationFor(SpinTopY, SpinBottomY))
         .SetLoops(-1, LoopType.Restart)
-        .SetEase(Ease.Linear);
+        .SetEase(Ease.Linear)
+        .OnStepComplete(() => ShuffleColumn(index));
       alltweens[index] = tweener;
     });
     alltweens[index] = seq;
@@ -965,23 +1017,42 @@ public class SlotBehaviour : MonoBehaviour
 
   private Coroutine textAnimCoroutine;
 
-  internal void AnimateNormalText(double targetValue)
+  //duration <= 0 uses the default animDuration; a tiered win passes the celebration's own lerp
+  //duration so both counters reach the final amount at the same moment
+  internal void AnimateNormalText(double targetValue, float duration = -1f)
+  {
+    StopNormalTextAnim();
+    textAnimCoroutine = StartCoroutine(NormalTextRoutine(targetValue, duration > 0f ? duration : animDuration));
+  }
+
+  //cancels the count and jumps TotalWin_text straight to the final amount. Used when the win
+  //celebration is skipped, so the UI number doesn't keep crawling after the popup has gone
+  private void SetNormalTextFinal(double value)
+  {
+    StopNormalTextAnim();
+    if (TotalWin_text) TotalWin_text.text = value.ToString("0.###");
+  }
+
+  //must be called before writing TotalWin_text by hand — the routine writes it every frame and
+  //would otherwise overwrite the new value on the next one
+  private void StopNormalTextAnim()
   {
     if (textAnimCoroutine != null)
+    {
       StopCoroutine(textAnimCoroutine);
-
-    textAnimCoroutine = StartCoroutine(NormalTextRoutine(targetValue));
+      textAnimCoroutine = null;
+    }
   }
-  private IEnumerator NormalTextRoutine(double target)
+  private IEnumerator NormalTextRoutine(double target, float duration)
   {
     double current = 0;
     float time = 0;
 
-    while (time < animDuration)
+    while (time < duration)
     {
       time += Time.deltaTime;
 
-      float t = Mathf.Clamp01(time / animDuration);
+      float t = Mathf.Clamp01(time / duration);
       float curved = animCurve.Evaluate(t);
 
       current = target * curved;
