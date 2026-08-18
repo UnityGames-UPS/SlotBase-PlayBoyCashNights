@@ -20,10 +20,6 @@ public class SlotBehaviour : MonoBehaviour
   [SerializeField]
   private List<SlotImage> Tempimages;     //class to store the result matrix
 
-  [Header("Slots Elements")]
-  [SerializeField]
-  private LayoutElement[] Slot_Elements;
-
   [Header("Slots Transforms")]
   [SerializeField]
   private Transform[] Slot_Transform;
@@ -472,7 +468,7 @@ public class SlotBehaviour : MonoBehaviour
 
       case 6:
         selectedSprites = symbolSix;
-        animScript.AnimationSpeed = 40;
+        animScript.AnimationSpeed = 31;
         animScript.ScaleSize = 1.6f;
         break;
 
