@@ -124,8 +124,8 @@ public class AudioController : MonoBehaviour
 
   internal void StopWLAaudio()
   {
-    audioPlayer_wl.Stop();
     audioPlayer_wl.loop = false;
+    audioPlayer_wl.Stop();
   }
 
   internal void StopBonusAaudio()

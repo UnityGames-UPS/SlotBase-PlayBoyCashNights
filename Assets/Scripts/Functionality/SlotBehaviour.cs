@@ -665,6 +665,10 @@ public class SlotBehaviour : MonoBehaviour
     {
       StopTweening(Slot_Transform[i], i);
 
+      //the OutBack settle spends its tail on an invisible sub-pixel overshoot, so killing the
+      //loop on tween completion leaves the spin clip audibly running past the visible stop
+      if (i == numberOfSlots - 1) audioController.StopWLAaudio();
+
       float wait = IsTurboOn || StopSpinToggle ? 0.2f : 0.6f;
       yield return new WaitForSecondsRealtime(wait);
     }
@@ -677,7 +681,6 @@ public class SlotBehaviour : MonoBehaviour
     uiManager.PlayRellsLoop(true);
     StopSpinToggle = false;
     StopSpin_Button.gameObject.SetActive(false);
-    audioController.StopWLAaudio();
 
     if (SocketManager.ResultData.payload.winAmount > 0)
     {
