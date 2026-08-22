@@ -1,0 +1,292 @@
+{
+  "id": "SL-PCN",
+  "rtp": 94.51,
+  "bets": [
+    2,
+    5,
+    10,
+    15,
+    20,
+    40,
+    60,
+    100,
+    200,
+    300,
+    400,
+    500
+  ],
+  "lines": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      1,
+      0
+    ]
+  ],
+  "matrix": {
+    "x": 3,
+    "y": 3
+  },
+  "symbols": [
+    {
+      "id": 0,
+      "name": "Blank",
+      "multiplier": [],
+      "useWildSub": false,
+      "description": "Empty symbol. No win. Two Wilds and a Blank is not a win. Single Wild without Cherry and without matching non-blank symbols is not a win.",
+      "reelsInstance": {
+        "0": 53,
+        "1": 53,
+        "2": 55
+      }
+    },
+    {
+      "id": 1,
+      "name": "Seven",
+      "multiplier": [
+        80
+      ],
+      "useWildSub": true,
+      "description": "Red Seven. 3x = 80 credits.",
+      "reelsInstance": {
+        "0": 2,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bar1",
+      "multiplier": [
+        10
+      ],
+      "useWildSub": true,
+      "description": "Single Bar. 3x = 10 credits.",
+      "reelsInstance": {
+        "0": 5,
+        "1": 6,
+        "2": 6
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bar2",
+      "multiplier": [
+        25
+      ],
+      "useWildSub": true,
+      "description": "Double Bar. 3x = 25 credits.",
+      "reelsInstance": {
+        "0": 6,
+        "1": 6,
+        "2": 5
+      }
+    },
+    {
+      "id": 4,
+      "name": "Bar3",
+      "multiplier": [
+        40
+      ],
+      "useWildSub": true,
+      "description": "Triple Bar. 3x = 40 credits.",
+      "reelsInstance": {
+        "0": 6,
+        "1": 6,
+        "2": 5
+      }
+    },
+    {
+      "id": 5,
+      "name": "Cherry",
+      "multiplier": [
+        10,
+        5,
+        2
+      ],
+      "useWildSub": true,
+      "description": "3x Cherry = 10 credits. Any 2 Cherry = 5 credits. Any 1 Cherry = 2 credits. Wild substitutes for Cherry only if another Cherry exists on the payline. Single Wild without Cherry is not a win. Two Wilds and blank is not a win.",
+      "reelsInstance": {
+        "0": 3,
+        "1": 3,
+        "2": 4
+      }
+    },
+    {
+      "id": 6,
+      "name": "PlayboyCashNightsWild",
+      "multiplier": [
+        2500,
+        4,
+        2
+      ],
+      "useWildSub": true,
+      "description": "Playboy Cash Nights Wild. Substitutes for all symbols except Bonus. 3x = 2500 credits. (1) Wild = pay x2. (2) Wilds = pay x4. (3) Wilds = 2500 credits.",
+      "reelsInstance": {
+        "0": 1,
+        "1": 1,
+        "2": 2
+      }
+    },
+    {
+      "id": 7,
+      "name": "DoubleCrownsWild",
+      "multiplier": [
+        1000,
+        4,
+        2
+      ],
+      "useWildSub": true,
+      "description": "Double Crowns Wild. Substitutes for all symbols except PlayboyCashNightsWild and Bonus. (1) Wild = pay x2. (2) Wilds = pay x4. (3) Double Crowns Wild + PlayboyCashNightsWild combination = 1000 credits.",
+      "reelsInstance": {
+        "0": 2,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "id": 8,
+      "name": "Bonus",
+      "useWildSub": false,
+      "description": "Appears only on Reel 3. Triggers Wheel Bonus mode. Player is awarded 1 spin and receives the value of the wedge the pointer lands on.",
+      "reelsInstance": {
+        "0": 0,
+        "1": 0,
+        "2": 1
+      }
+    }
+  ],
+  "features": {
+    "wheelBonus": {
+      "isEnabled": true,
+      "description": "Triggered when Bonus symbol appears on Reel 3. Player spins the wheel and wins the value of the wedge landed on.",
+      "multipliers": [
+        20,
+        200,
+        50,
+        100,
+        40,
+        400,
+        25,
+        150,
+        30,
+        125,
+        75,
+        250,
+        40,
+        100,
+        50,
+        500,
+        30,
+        60,
+        75,
+        100,
+        25,
+        1000
+      ],
+      "triggerReel": 2,
+      "spinsAwarded": 1,
+      "multiplierProbs": [
+        0.3,
+        0.002,
+        0.01,
+        0.005,
+        0.015,
+        0.0005,
+        0.285,
+        0.003,
+        0.02,
+        0.004,
+        0.006,
+        0.001,
+        0.015,
+        0.005,
+        0.01,
+        0.00025,
+        0.02,
+        0.00525,
+        0.006,
+        0.005,
+        0.282,
+        1e-8
+      ],
+      "triggerSymbolId": 8,
+      "triggerSymbolName": "Bonus"
+    },
+    "specialWins": {
+      "anyBar": {
+        "pay": 5,
+        "description": "A mix of non-matching Bar symbols (Bar1, Bar2, Bar3) on a payline = 5 credits. Not a standalone symbol — derived win condition only."
+      },
+      "cherry": {
+        "multiplier": [
+          10,
+          5,
+          2
+        ],
+        "description": "Any 1 Cherry = 2 credits regardless of reel position. Any 2 Cherries = 5 credits. 3 Cherries = 10 credits."
+      },
+      "wildCherry": {
+        "description": "Wild substitutes for Cherry only if another Cherry exists on the same payline. Single Wild without Cherry and without matching non-blank symbols is not a win. Two Wilds and a blank is not a win."
+      }
+    },
+    "wildMultiplier": {
+      "rules": [
+        {
+          "wildType": "PlayboyWild",
+          "wildCount": 1,
+          "multiplier": 2
+        },
+        {
+          "wildType": "PlayboyWild",
+          "wildCount": 2,
+          "multiplier": 4
+        },
+        {
+          "credits": 2500,
+          "wildType": "PlayboyWild",
+          "wildCount": 3
+        },
+        {
+          "wildType": "DoubleCrownsWild",
+          "wildCount": 1,
+          "multiplier": 2
+        },
+        {
+          "wildType": "DoubleCrownsWild",
+          "wildCount": 2,
+          "multiplier": 4
+        },
+        {
+          "credits": 1000,
+          "wildType": "DoubleCrownsWild",
+          "wildCount": 3
+        }
+      ],
+      "isEnabled": true
+    }
+  },
+  "betMultiplier": {
+    "description": "All wins multiplied by Bet Multiplier. Bet Multiplier = Total Bet / 5 Lines."
+  },
+  "minMatchCount": 3
+}
